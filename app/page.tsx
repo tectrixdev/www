@@ -12,7 +12,7 @@ export default function Home() {
     <main>
       <div
         id="tagline"
-        className={`${Rubik.className} bg-gradient-to-r from-red-700 to-blue-800 bg-clip-text text-6xl self-center text-center mt-10 lg:text-9xl md:text-8xl transition-all duration-1000 text-transparent `}
+        className={`${Rubik.className} mt-10 self-center bg-gradient-to-r from-red-700 to-blue-800 bg-clip-text text-center text-6xl text-transparent transition-all duration-1000 md:text-8xl lg:text-9xl`}
       >
         TecTrix
       </div>
