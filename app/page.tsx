@@ -1,7 +1,13 @@
+"use client";
 import Image from "next/image";
-import { Rubik_Scribble } from "next/font/google";
+import { Monoton } from "next/font/google";
+import { motion } from "motion/react";
+import { NodeNextResponse } from "next/dist/server/base-http/node";
+import Divider from "@/components/divider";
+import Tagline from "@/components/tagline";
+import Tagsub from "@/components/tagsub";
 
-const Rubik = Rubik_Scribble({
+const monoton = Monoton({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
@@ -10,12 +16,11 @@ const Rubik = Rubik_Scribble({
 export default function Home() {
   return (
     <main>
-      <div
-        id="tagline"
-        className={`${Rubik.className} mt-10 self-center bg-gradient-to-r from-red-700 to-blue-800 bg-clip-text text-center text-6xl text-transparent transition-all duration-1000 md:text-8xl lg:text-9xl`}
-      >
-        TecTrix
-      </div>
+      <Tagline line="TecTrix" />
+      <Tagsub sub="Joran Hennion" />
+      <Divider />
     </main>
   );
 }
+
+// bg-gradient-to-r from-red-700 to-blue-800 bg-clip-text
