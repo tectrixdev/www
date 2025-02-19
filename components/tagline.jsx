@@ -1,5 +1,6 @@
-import { motion } from "motion/react";
+import { motion, MotionValue } from "motion/react";
 import { Monoton } from "next/font/google";
+import { ReactNode } from "react";
 const monoton = Monoton({
   subsets: ["latin"],
   weight: ["400"],
