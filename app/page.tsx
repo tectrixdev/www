@@ -6,6 +6,9 @@ import { NodeNextResponse } from "next/dist/server/base-http/node";
 import Divider from "@/components/divider";
 import Tagline from "@/components/tagline";
 import Tagsub from "@/components/tagsub";
+import FadeContent from "@/components/fade";
+import Yap from "@/components/placeholderyap";
+import AnimatedContent from "@/components/animatedcontent";
 
 const monoton = Monoton({
   subsets: ["latin"],
@@ -16,9 +19,25 @@ const monoton = Monoton({
 export default function Home() {
   return (
     <main>
-      <Tagline line="TecTrix" />
-      <Tagsub sub="Joran Hennion" />
-      <Divider />
+      <AnimatedContent reverse={true}>
+        <Tagline line="TecTrix" />
+        <Tagsub sub="Joran Hennion" />
+      </AnimatedContent>
+      <AnimatedContent>
+        <Divider />
+        <Yap />
+        <Yap />
+        <Yap />
+        <Yap />
+        <Yap />
+        <Yap />
+        <Yap />
+        <Yap />
+      </AnimatedContent>
+      <div
+        id="fade"
+        className="fixed bottom-0 h-1/6 w-full bg-gradient-to-b from-transparent to-black"
+      />
     </main>
   );
 }
