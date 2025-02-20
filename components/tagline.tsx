@@ -1,16 +1,21 @@
-import { motion } from "motion/react";
+import { motion, MotionValue } from "motion/react";
 import { Monoton } from "next/font/google";
+import { ReactNode } from "react";
 const monoton = Monoton({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
 });
 
-export default function Tagsub(props) {
+interface Props {
+  line: string;
+}
+
+const Tagline: React.FC<Props> = ({ line }) => {
   return (
     <motion.div
-      id="subtitle"
-      className={`${monoton.className} mb-5 mt-0 cursor-grab select-none self-center text-center text-4xl text-white drop-shadow-xl active:cursor-grabbing md:text-5xl lg:text-6xl`}
+      id="tagline"
+      className={`${monoton.className} mb-5 mt-10 cursor-grab select-none self-center text-center text-6xl text-white drop-shadow-xl active:cursor-grabbing md:text-7xl lg:text-8xl`}
       initial={{ y: "-200%", scale: 0.9 }}
       animate={{ y: 0, scale: 1 }}
       drag
@@ -19,7 +24,9 @@ export default function Tagsub(props) {
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.8 }}
     >
-      {props.sub}
+      {line}
     </motion.div>
   );
-}
+};
+
+export default Tagline;
