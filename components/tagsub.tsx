@@ -20,6 +20,9 @@ const Tagsub: React.FC<Props> = ({ sub }) => {
       dragConstraints={{ top: 10, left: 10, right: 10, bottom: 10 }}
       whileHover={{ scale: 1.2 }}
       whileTap={{ scale: 0.8 }}
+      initial={{ opacity: 0, y: 100, scale: 0.5 }}
+      whileInView={{ opacity: 100, y: 0, scale: 1 }}
+      transition={{ duration: 1, type: "spring" }}
     >
       {sub}
     </motion.div>

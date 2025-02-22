@@ -49,7 +49,7 @@ export default function RootLayout({
         <meta name="darkreader-lock" />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden bg-[url(/bg.webp)] bg-cover bg-fixed bg-center bg-no-repeat antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden bg-[url(/bg.webp)] bg-cover bg-fixed bg-center bg-no-repeat antialiased md:pb-44`}
       >
         {children}
       </body>
