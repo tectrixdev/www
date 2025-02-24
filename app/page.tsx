@@ -1,19 +1,21 @@
 "use client";
+// "average import length"
 import Image from "next/image";
-import { Monoton } from "next/font/google";
-import { motion, useScroll, useTransform } from "motion/react";
-import { NodeNextResponse } from "next/dist/server/base-http/node";
+import { Rubik_Glitch } from "next/font/google";
 import Divider from "@/components/divider";
 import Tagline from "@/components/tagline";
 import Tagsub from "@/components/tagsub";
-import FadeContent from "@/components/fade";
 import Yap from "@/components/placeholderyap";
+import { motion } from "motion/react";
+import PixelCard from "@/components/reactbits/Components/PixelCard/PixelCard";
 
-const monoton = Monoton({
+const main = Rubik_Glitch({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
 });
+
+// TODO: center these cards on desktop
 
 export default function Home() {
   return (
@@ -21,6 +23,26 @@ export default function Home() {
       <Tagline line="TecTrix" />
       <Tagsub sub="Joran Hennion" />
       <Divider />
+      <div id="cardwrapper" className="flex flex-col gap-5 lg:flex-row">
+        <PixelCard
+          variant="default"
+          className="h-60 w-5/6 place-self-center border-white shadow-xl backdrop-blur-lg md:h-64 lg:h-96 lg:w-72"
+        >
+          <p className="absolute text-white">design</p>
+        </PixelCard>
+        <PixelCard
+          variant="default"
+          className="h-60 w-5/6 place-self-center border-white shadow-xl backdrop-blur-lg md:h-64 lg:h-96 lg:w-72"
+        >
+          <p className="absolute text-white">Photography</p>
+        </PixelCard>
+        <PixelCard
+          variant="default"
+          className="h-60 w-5/6 place-self-center border-white shadow-xl backdrop-blur-lg md:h-64 lg:h-96 lg:w-72"
+        >
+          <p className="absolute text-white">Development</p>
+        </PixelCard>
+      </div>
       <Yap />
       <Yap />
       <Yap />

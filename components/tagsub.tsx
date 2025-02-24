@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
-import { Monoton } from "next/font/google";
-const monoton = Monoton({
+import { Rubik_Glitch } from "next/font/google";
+
+const main = Rubik_Glitch({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
@@ -14,7 +15,7 @@ const Tagsub: React.FC<Props> = ({ sub }) => {
   return (
     <motion.div
       id="subtitle"
-      className={`${monoton.className} mb-5 mt-0 cursor-grab select-none self-center text-center text-4xl text-white drop-shadow-xl active:cursor-grabbing md:text-5xl lg:text-6xl`}
+      className={`${main.className} mb-5 mt-0 cursor-grab select-none self-center text-center text-4xl text-white drop-shadow-xl active:cursor-grabbing md:text-5xl lg:text-6xl`}
       drag
       dragSnapToOrigin
       dragConstraints={{ top: 10, left: 10, right: 10, bottom: 10 }}

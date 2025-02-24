@@ -1,4 +1,3 @@
-import FadeContent from "./fade";
 import { motion } from "motion/react";
 
 export default function Yap() {
