@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Scrollbody from "@/components/scrollbg";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -48,11 +49,7 @@ export default function RootLayout({
       <head>
         <meta name="darkreader-lock" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden bg-[url(/bg.webp)] bg-cover bg-fixed bg-center bg-no-repeat antialiased md:pb-44`}
-      >
-        {children}
-      </body>
+      <Scrollbody>{children}</Scrollbody>
     </html>
   );
 }

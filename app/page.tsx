@@ -16,17 +16,11 @@ const monoton = Monoton({
 });
 
 export default function Home() {
-  const { scrollYProgress } = useScroll();
-  const width = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
   return (
     <main>
       <Tagline line="TecTrix" />
       <Tagsub sub="Joran Hennion" />
       <Divider />
-      <motion.div
-        className="fixed top-0 h-5 bg-[url(/bg.webp)] bg-no-repeat"
-        style={{ width, backgroundSize: width }}
-      />
       <Yap />
       <Yap />
       <Yap />
