@@ -7,7 +7,6 @@ import Tagline from "@/components/tagline";
 import Tagsub from "@/components/tagsub";
 import Yap from "@/components/placeholderyap";
 import { motion } from "motion/react";
-import PixelCard from "@/components/reactbits/Components/PixelCard/PixelCard";
 
 const main = Rubik_Glitch({
   subsets: ["latin"],
@@ -15,34 +14,12 @@ const main = Rubik_Glitch({
   style: ["normal"],
 });
 
-// TODO: center these cards on desktop
-
 export default function Home() {
   return (
     <main>
       <Tagline line="TecTrix" />
       <Tagsub sub="Joran Hennion" />
       <Divider />
-      <div id="cardwrapper" className="flex flex-col gap-5 lg:flex-row">
-        <PixelCard
-          variant="default"
-          className="h-60 w-5/6 place-self-center border-white shadow-xl backdrop-blur-lg md:h-64 lg:h-96 lg:w-72"
-        >
-          <p className="absolute text-white">design</p>
-        </PixelCard>
-        <PixelCard
-          variant="default"
-          className="h-60 w-5/6 place-self-center border-white shadow-xl backdrop-blur-lg md:h-64 lg:h-96 lg:w-72"
-        >
-          <p className="absolute text-white">Photography</p>
-        </PixelCard>
-        <PixelCard
-          variant="default"
-          className="h-60 w-5/6 place-self-center border-white shadow-xl backdrop-blur-lg md:h-64 lg:h-96 lg:w-72"
-        >
-          <p className="absolute text-white">Development</p>
-        </PixelCard>
-      </div>
       <Yap />
       <Yap />
       <Yap />
