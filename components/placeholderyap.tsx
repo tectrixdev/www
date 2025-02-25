@@ -3,7 +3,7 @@ import { motion } from "motion/react";
 export default function Yap() {
   return (
     <motion.p
-      className="text-md my-5 justify-center self-center px-20 text-justify text-white"
+      className="text-md my-5 justify-center self-center px-20 text-justify text-white selection:bg-red-700/75 selection:text-black"
       initial={{ opacity: 0, y: 100, scale: 0.9 }}
       whileInView={{ opacity: 100, y: 0, scale: 1 }}
       transition={{ duration: 1.5, type: "spring" }}
