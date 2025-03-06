@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/web": "^9.7.5",
     "motion": "^12.4.5",
     "next": "15.1.7",
     "react": "^19.0.0",
