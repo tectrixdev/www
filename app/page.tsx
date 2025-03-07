@@ -9,6 +9,7 @@ import Yap from "@/components/placeholderyap";
 import { motion } from "motion/react";
 import Card from "@/components/card";
 import Content from "@/components/content";
+import Banner from "@/components/banner";
 
 const main = Rubik_Glitch({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ const main = Rubik_Glitch({
 export default function Home() {
   return (
     <main>
+      <Banner />
       <Tagline line="TecTrix" />
       <Tagsub sub="Joran Hennion" />
       <Divider />
