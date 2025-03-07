@@ -6,13 +6,15 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "vercel deploy"
   },
   "dependencies": {
     "motion": "^12.4.5",
     "next": "15.1.7",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+    "vercel": "^41.3.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
