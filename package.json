@@ -10,6 +10,8 @@
     "deploy": "vercel deploy"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^1.2.0",
     "motion": "^12.4.5",
     "next": "15.1.7",
     "react": "^19.0.0",
