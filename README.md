@@ -1,2 +1,5 @@
 # My website
-## in progress, moved to tectrix.dev when ready
+## [tectrix.dev](https://tectrix.dev)
+
+TODO:
+- [ ] fix breakpoints, content, cards
