@@ -33,7 +33,7 @@ const Card: React.FC<Props> = ({ title, content, transparency, color }) => {
         borderColor: color,
       }}
       transition={{ duration: 1.5, type: "spring" }}
-      className="h-auto w-full rounded-lg border-2 backdrop-blur-md md:h-64 md:w-64"
+      className="h-auto w-full rounded-lg border-2 backdrop-blur-md lg:min-h-64 lg:min-w-64"
     >
       <div
         className={`text-center text-white ${main.className} m-5 text-2xl`}
