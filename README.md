@@ -5,3 +5,4 @@ TODO:
 - [ ] fix breakpoints, content, cards
 - [ ] fix scrollbar glitches
 - [ ] fix performance
+- [ ] add opengraph
