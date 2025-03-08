@@ -10,6 +10,7 @@ import { motion } from "motion/react";
 import Card from "@/components/card";
 import Content from "@/components/content";
 import Banner from "@/components/banner";
+import Footer from "@/components/footershadow";
 
 const main = Rubik_Glitch({
   subsets: ["latin"],
@@ -28,10 +29,7 @@ export default function Home() {
         <Card title="test" content="test" transparency={75} color="red" />
         <Card title="test" content="test" transparency={75} color="red" />
       </Content>
-      <div
-        id="fade"
-        className="invisible fixed bottom-0 z-50 h-44 w-full bg-gradient-to-b from-transparent to-black md:visible"
-      />
+      <Footer />
     </main>
   );
 }
