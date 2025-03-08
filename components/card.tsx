@@ -1,3 +1,4 @@
+"use client";
 import { motion } from "motion/react";
 import { Rubik_Glitch } from "next/font/google";
 

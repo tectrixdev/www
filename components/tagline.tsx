@@ -1,3 +1,4 @@
+"use client";
 import { easeInOut, motion, MotionValue } from "motion/react";
 import { Rubik_Glitch } from "next/font/google";
 import { ReactNode } from "react";

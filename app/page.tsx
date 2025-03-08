@@ -1,4 +1,3 @@
-"use client";
 // "average import length"
 import Image from "next/image";
 import { Rubik_Glitch } from "next/font/google";
