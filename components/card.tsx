@@ -1,21 +1,53 @@
 import { motion } from "motion/react";
+import { Rubik_Glitch } from "next/font/google";
 
 interface Props {
   title: string;
-  content: string;
+  content: React.ReactNode;
   transparency: number;
   color: string;
 }
+
+const main = Rubik_Glitch({
+  subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal"],
+});
 
 const Card: React.FC<Props> = ({ title, content, transparency, color }) => {
   return (
     <motion.div
       id={`Card.${title}`}
-      initial={{ opacity: 0, y: 100, scale: 0.9 }}
-      whileInView={{ opacity: 100, y: 0, scale: 1 }}
+      initial={{
+        backgroundColor: `rgba(0, 0, 0, 0)`,
+        opacity: 0,
+        y: 100,
+        scale: 0.9,
+        borderColor: "white",
+      }}
+      whileInView={{
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        backgroundColor: `rgba(0, 0, 0, ${transparency / 100})`,
+        borderColor: color,
+      }}
       transition={{ duration: 1.5, type: "spring" }}
-      className="h-48 w-full rounded-lg border-2 border-slate-300 bg-black/50 backdrop-blur-md md:h-96 md:w-64"
-    ></motion.div>
+      className="h-auto w-full rounded-lg border-2 backdrop-blur-md md:h-64 md:w-64"
+    >
+      <div
+        className={`text-center text-white ${main.className} m-5 text-2xl`}
+        id={`title.${title}`}
+      >
+        {title}
+      </div>
+      <div
+        className={`text-md m-5 text-center font-bold text-white`}
+        id={`content.${title}`}
+      >
+        {content}
+      </div>
+    </motion.div>
   );
 };
 
