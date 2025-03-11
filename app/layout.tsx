@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TecTrix",
+  title: "Joran Hennion",
   description: "TecTrix'/joran's portofolio",
   generator: "Next.js",
   applicationName: "Tectrix.dev",
