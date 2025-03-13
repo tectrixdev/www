@@ -4,7 +4,8 @@ import "./globals.css";
 import Scrollbody from "@/components/scrollbg";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import Footer from "@/components/footershadow";
+import FooterShadow from "@/components/footershadow";
+import Footer from "@/components/footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,6 +57,7 @@ export default function RootLayout({
         {children}
         <Analytics />
         <SpeedInsights />
+        <FooterShadow />
         <Footer />
       </Scrollbody>
     </html>

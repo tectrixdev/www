@@ -10,6 +10,7 @@ import Card from "@/components/card";
 import Content from "@/components/content";
 import Banner from "@/components/banner";
 import Subtitle from "@/components/subtitle";
+import PictureGallery from "@/components/picturegallery";
 
 const main = Rubik_Glitch({
   subsets: ["latin"],
@@ -25,6 +26,7 @@ export default function Home() {
       <Tagsub sub="Joran Hennion" />
       <Content>
         <Subtitle title="Photography" />
+        <PictureGallery />
         <Subtitle title="Development" />
         <Subtitle title="Design" />
         <Subtitle title="Linux" />
