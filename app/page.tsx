@@ -28,6 +28,12 @@ export default function Home() {
         <Subtitle title="Photography" />
         <PictureGallery />
         <Subtitle title="Development" />
+        {/*<Card
+          title="My portfolio"
+          description="You are right here ;)"
+          imageUrl="/Pictures/1.webp"
+          projectUrl="https://tectrix.dev"
+        />*/}
         <Subtitle title="Design" />
         <Subtitle title="Linux" />
       </Content>

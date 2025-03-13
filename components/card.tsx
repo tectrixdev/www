@@ -1,12 +1,14 @@
 "use client";
 import { motion } from "motion/react";
 import { Rubik_Glitch } from "next/font/google";
+import Image from "next/image";
+import Link from "next/link";
 
 interface Props {
   title: string;
-  content: React.ReactNode;
-  transparency: number;
-  color: string;
+  description: string;
+  imageUrl: string;
+  projectUrl: string;
 }
 
 const main = Rubik_Glitch({
@@ -15,38 +17,59 @@ const main = Rubik_Glitch({
   style: ["normal"],
 });
 
-const Card: React.FC<Props> = ({ title, content, transparency, color }) => {
+const Card: React.FC<Props> = ({
+  title,
+  description,
+  imageUrl,
+  projectUrl,
+}) => {
   return (
     <motion.div
       id={`Card.${title}`}
       initial={{
-        backgroundColor: `rgba(0, 0, 0, 0)`,
         opacity: 0,
         y: 100,
         scale: 0.9,
-        borderColor: "white",
       }}
       whileInView={{
         opacity: 1,
         y: 0,
         scale: 1,
-        backgroundColor: `rgba(0, 0, 0, ${transparency / 100})`,
-        borderColor: color,
       }}
       transition={{ duration: 1.5, type: "spring" }}
-      className="h-auto w-full rounded-lg border-2 backdrop-blur-md lg:min-h-64 lg:min-w-64"
+      className="h-auto w-full max-w-xs overflow-hidden rounded-lg border-2 backdrop-blur-md"
     >
-      <div
-        className={`text-center text-white ${main.className} m-5 text-2xl`}
-        id={`title.${title}`}
-      >
-        {title}
-      </div>
-      <div
-        className={`text-md m-5 text-center font-bold text-white`}
-        id={`content.${title}`}
-      >
-        {content}
+      <Image
+        src={imageUrl}
+        alt={title}
+        className="h-36 w-full object-cover"
+        width={400}
+        height={400}
+      />
+      <div className="p-4">
+        <div
+          className={`text-center text-white ${main.className} text-lg`}
+          id={`title.${title}`}
+        >
+          {title}
+        </div>
+        <div
+          className="mt-2 text-center text-sm font-bold text-white"
+          id={`description.${title}`}
+        >
+          {description}
+        </div>
+        <div className="mt-4 text-center">
+          <Link
+            href={projectUrl}
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block w-full rounded-lg bg-blue-500 p-2 text-center text-white"
+          >
+            View Project
+          </Link>
+        </div>
       </div>
     </motion.div>
   );
