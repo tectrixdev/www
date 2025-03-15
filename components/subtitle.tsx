@@ -3,7 +3,7 @@ import React from "react";
 import { Rubik_Mono_One } from "next/font/google";
 import { motion } from "motion/react";
 
-const monoton = Rubik_Mono_One({
+const main = Rubik_Mono_One({
   subsets: ["latin"],
   weight: ["400"],
   style: ["normal"],
@@ -29,7 +29,7 @@ const Subtitle: React.FC<Props> = ({ title }) => {
   return (
     <div>
       <motion.p
-        className={`${monoton.className} mt-14 snap-y text-center text-4xl text-white`}
+        className={`${main.className} mt-14 snap-y text-center text-4xl text-white`}
         id={`Sub.${title}`}
         initial={{
           opacity: 0,
