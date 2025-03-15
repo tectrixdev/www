@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
       href="https://raw.githubusercontent.com/tectrixdev/portfolio/refs/heads/main/LICENSE"
       title="License (info)"
     >
-      <footer className="w-full bg-white/10 p-4 text-center font-bold text-white backdrop-blur-lg">
+      <footer className="w-full bg-black p-4 text-center font-bold text-white">
         <p>
           &copy; {new Date().getFullYear()} Joran Hennion. All rights reserved.
         </p>
