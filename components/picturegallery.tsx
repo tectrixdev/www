@@ -125,7 +125,20 @@ const PictureGallery = () => {
           );
         })}
       </motion.div>
-      <div className="mx-auto mt-5 flex flex-col items-center justify-center self-center">
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 100,
+          scale: 0.9,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          scale: 1,
+        }}
+        transition={{ duration: 1.5, type: "spring" }}
+        className="mx-auto mt-5 flex flex-col items-center justify-center self-center"
+      >
         <Link
           href="https://www.instagram.com/joran.hennion/"
           target="_blank"
@@ -143,7 +156,7 @@ const PictureGallery = () => {
           />
           <p className={`mx-5 text-white ${main.className}`}>page</p>
         </Link>
-      </div>
+      </motion.div>
     </div>
   );
 };
