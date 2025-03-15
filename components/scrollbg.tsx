@@ -12,7 +12,7 @@ export default function Scrollbody({
   const pos = useTransform(scrollYProgress, [0, 1], ["0%", "75%"]);
   return (
     <motion.body
-      className="h-full w-full overflow-x-hidden scroll-smooth bg-black bg-[url(/scrollbg.webp)] bg-fixed bg-center bg-no-repeat antialiased"
+      className="h-full w-full transform-gpu overflow-x-hidden scroll-smooth bg-black bg-[url(/scrollbg.webp)] bg-fixed bg-center bg-no-repeat antialiased"
       style={{ backgroundSize: size, backgroundPositionY: pos }}
     >
       {children}
