@@ -96,7 +96,6 @@ const PictureGallery = () => {
                   className="h-[170px] w-fit object-contain md:h-[500px] lg:h-[700px]"
                   tabIndex={0}
                   quality={75}
-                  loading="eager"
                 />
               </div>
               <button
