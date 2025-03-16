@@ -2,6 +2,7 @@
 import React from "react";
 import { Rubik_Mono_One } from "next/font/google";
 import { motion } from "motion/react";
+import Divider from "./divider";
 
 const main = Rubik_Mono_One({
   subsets: ["latin"],
@@ -12,18 +13,6 @@ const main = Rubik_Mono_One({
 interface Props {
   title: string;
 }
-
-const Divider = () => {
-  return (
-    <motion.div
-      initial={{ opacity: 0, y: 100, scale: 0.5 }}
-      whileInView={{ opacity: 100, y: 0, scale: 1 }}
-      transition={{ duration: 1, type: "spring" }}
-      id="divider"
-      className="mx-auto my-5 h-0.5 w-[60vw] self-center bg-white opacity-65 shadow-lg backdrop-blur-lg lg:h-1"
-    />
-  );
-};
 
 const Subtitle: React.FC<Props> = ({ title }) => {
   return (
