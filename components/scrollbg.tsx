@@ -13,7 +13,7 @@ export default function Scrollbody({
 
   return (
     <motion.body
-      className="h-full w-full transform-gpu scroll-smooth bg-black bg-[url(/scrollbg.webp)] bg-fixed bg-center bg-no-repeat antialiased"
+      className="h-full w-full transform-gpu scroll-smooth bg-[#101010] bg-[url(/scrollbg.webp)] bg-fixed bg-center bg-no-repeat antialiased"
       style={{
         backgroundSize: size,
         backgroundPositionY: pos,
