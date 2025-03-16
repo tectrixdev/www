@@ -7,5 +7,6 @@ TODO:
 - [x] fix breakpoints, content, cards
 - [x] image fullscreen popup
 - [x] fix scrollbar glitches
+- [ ] fix animation loop glitches
 - [ ] fix performance
 - [ ] add opengraph
