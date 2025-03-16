@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Banner: React.FC = () => {
   return (
-    <div className="bg-black/50 p-4 text-center font-bold text-white backdrop-blur-lg">
+    <div className="w-full bg-black/50 p-4 text-center font-bold text-white backdrop-blur-lg">
       <p>My website is under construction and this is the progress.</p>
       <p>For info and old page go to:</p>
       <Link

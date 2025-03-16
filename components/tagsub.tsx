@@ -16,7 +16,7 @@ const Tagsub: React.FC<Props> = ({ sub }) => {
   return (
     <motion.div
       id="subtitle"
-      className={`${main.className} mb-5 mt-0 cursor-grab select-none self-center text-center text-4xl text-white drop-shadow-xl active:cursor-grabbing md:text-5xl lg:text-6xl`}
+      className={`${main.className} mx-auto mb-5 mt-0 w-fit cursor-grab select-none self-center text-center text-4xl text-white drop-shadow-xl active:cursor-grabbing md:text-5xl lg:text-6xl`}
       drag
       dragSnapToOrigin
       dragConstraints={{ top: 10, left: 10, right: 10, bottom: 10 }}

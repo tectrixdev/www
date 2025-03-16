@@ -50,19 +50,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="overflow-x-hidden">
+    <html lang="en">
       <head>
         <meta name="darkreader-lock" />
       </head>
-      <MotionConfig reducedMotion="user">
-        <Scrollbody>
-          {children}
-          <Analytics />
-          <SpeedInsights />
-          <FooterShadow />
-          <Footer />
-        </Scrollbody>
-      </MotionConfig>
+      <Scrollbody>
+        <MotionConfig reducedMotion="user">{children}</MotionConfig>
+        <Analytics />
+        <SpeedInsights />
+        <FooterShadow />
+        <Footer />
+      </Scrollbody>
     </html>
   );
 }
