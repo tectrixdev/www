@@ -6,6 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import FooterShadow from "@/components/footershadow";
 import Footer from "@/components/footer";
+import { MotionConfig } from "motion/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,13 +54,15 @@ export default function RootLayout({
       <head>
         <meta name="darkreader-lock" />
       </head>
-      <Scrollbody>
-        {children}
-        <Analytics />
-        <SpeedInsights />
-        <FooterShadow />
-        <Footer />
-      </Scrollbody>
+      <MotionConfig reducedMotion="user">
+        <Scrollbody>
+          {children}
+          <Analytics />
+          <SpeedInsights />
+          <FooterShadow />
+          <Footer />
+        </Scrollbody>
+      </MotionConfig>
     </html>
   );
 }
