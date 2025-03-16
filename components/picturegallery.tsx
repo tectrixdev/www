@@ -79,22 +79,22 @@ const PictureGallery = () => {
               }
               modal
             >
-              <div className="flex items-center justify-items-center">
+              <div className="grid content-center items-center justify-items-center gap-5">
                 <button
-                  className="mx-5 size-10 justify-center rounded-full border-2 border-white p-2 text-center font-bold text-white backdrop-blur-lg disabled:opacity-50"
+                  className="h-fit w-full rounded-full border-2 border-white backdrop-blur-lg disabled:opacity-50"
                   onClick={decrement}
                   disabled={i === 1}
                 >
                   <Image
-                    src="/left.png"
+                    src="/left.svg"
                     alt="Previous"
                     width={24}
                     height={24}
-                    className="object-contain"
+                    className="mx-auto object-contain"
                   />
                 </button>
                 <div
-                  className="overflow-hidden rounded-lg border-2 border-white p-4 backdrop-blur-lg"
+                  className="overflow-hidden rounded-lg border-2 border-white p-1 backdrop-blur-lg"
                   id="popup"
                 >
                   <Image
@@ -102,22 +102,22 @@ const PictureGallery = () => {
                     alt={`Picture ${i}`}
                     width={3000}
                     height={3000}
-                    className="h-[170px] w-fit object-contain md:h-[500px] lg:h-[700px]"
+                    className="h-fit w-[300px] object-contain md:h-[500px] md:w-fit lg:h-[700px]"
                     tabIndex={0}
                     quality={75}
                   />
                 </div>
                 <button
-                  className="mx-5 size-10 justify-center rounded-full border-2 border-white p-2 text-center font-bold text-white backdrop-blur-lg disabled:opacity-50"
+                  className="h-fit w-full rounded-full border-2 border-white backdrop-blur-lg disabled:opacity-50"
                   onClick={increment}
                   disabled={i === images.length}
                 >
                   <Image
-                    src="/right.png"
+                    src="/right.svg"
                     alt="Next"
                     width={24}
                     height={24}
-                    className="object-contain"
+                    className="mx-auto object-contain"
                   />
                 </button>
               </div>
