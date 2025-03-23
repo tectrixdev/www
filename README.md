@@ -14,6 +14,7 @@ TODO:
 - [ ] add blog posts list page
 - [ ] fix blog posts footer
 - [ ] add images to blog posts and sitemap
+- [ ] custom 404
 - [ ] fix cards and rest of content on main page
 - [ ] fix blog posts unneeded code
 - [ ] fix performance
