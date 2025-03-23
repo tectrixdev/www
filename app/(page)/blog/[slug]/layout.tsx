@@ -47,6 +47,9 @@ export default async function RootLayout({
         <meta name="description" content={metadata.sub} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content={metadata.author} />
+        <meta name="robots" content="index, follow" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
       </head>
       <Scrollbody>
         <MotionConfig reducedMotion="user">
