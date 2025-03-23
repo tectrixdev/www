@@ -4,7 +4,7 @@ interface Props {
 
 const Content: React.FC<Props> = ({ children }) => {
   return (
-    <div className="flex flex-col px-10 py-10 text-white lg:px-96">
+    <div className="flex min-h-full flex-col px-10 py-10 text-white lg:px-96">
       {children}
     </div>
   );
