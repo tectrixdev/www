@@ -8,6 +8,8 @@ TODO:
 - [x] image fullscreen popup
 - [x] fix scrollbar glitches
 - [x] fix animation loop glitches
+- [ ] add navbar
+- [ ] add blog posts list page
 - [ ] fix blog posts footer
 - [ ] generate sitemap based on posts too
 - [ ] format blog posts(markdown)
