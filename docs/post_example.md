@@ -1,5 +1,4 @@
 ---
-path: "file name"
 title: "Title"
 sub: "description"
 author: "Joran Hennion"

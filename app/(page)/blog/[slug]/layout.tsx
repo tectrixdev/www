@@ -6,12 +6,11 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import FooterShadow from "@/components/footershadow";
 import Footer from "@/components/footer";
 import { MotionConfig } from "motion/react";
-import Content from "@/components/content";
+import Content from "@/components/blog_content";
 import Tagline from "@/components/tagline";
 import Tagsub from "@/components/tagsub";
 import Divider from "@/components/divider";
 import PostInfo from "@/components/postinfo";
-import { MetadataBoundary } from "next/dist/lib/metadata/metadata-boundary";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
