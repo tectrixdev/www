@@ -1,3 +1,5 @@
+import Posts from "./postlist";
+
 export default async function Page({
   params,
 }: {
@@ -5,17 +7,11 @@ export default async function Page({
 }) {
   const { slug } = await params;
   const { default: Post } = await import(`@/content/${slug}.mdx`);
-  const mod = await import(`@/content/${slug}.mdx`);
-  const metadata = mod.matter;
-  console.log("page details:");
-  console.log(metadata);
-  return (
-      <Post />
-  );
+  return <Post />;
 }
 
 export function generateStaticParams() {
-  return [{ slug: "welcome" }, { slug: "about" }];
+  return Posts;
 }
 
 export const dynamicParams = false;

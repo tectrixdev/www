@@ -26,12 +26,12 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   keywords: [
     "Joran Hennion",
-    "jojommeke",
-    "tectrix",
-    "TecTrix",
-    "tectrix.dev",
-    "Joran",
-    "Hennion",
+    " jojommeke",
+    " tectrix",
+    " TecTrix",
+    " tectrix.dev",
+    " Joran",
+    " Hennion",
   ],
   authors: [{ name: "Joran Hennion" }],
   creator: "Joran Hennion",
@@ -53,6 +53,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="darkreader-lock" />
+        <meta name="robots" content="index, follow" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="language" content="English" />
       </head>
       <Scrollbody>
         <MotionConfig reducedMotion="user">{children}</MotionConfig>
