@@ -27,6 +27,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "daily",
       priority: 1,
     },
+    {
+      url: "https://tectrix.dev/blog",
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
     ...postSitemaps,
   ];
 }

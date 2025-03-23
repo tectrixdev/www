@@ -1,7 +1,7 @@
 # My website
 ## [tectrix.dev](https://tectrix.dev)
 
-V.0.3.3 - blog in development
+V.0.3.6 - blog posts list
 
 TODO:
 - [x] fix breakpoints, content, cards
@@ -10,8 +10,8 @@ TODO:
 - [x] fix animation loop glitches
 - [x] generate sitemap based on posts
 - [x] fix md styles - half done, mobile styles size difference | (improvements can be made later)
+- [x] add blog posts list page
 - [ ] add navbar
-- [ ] add blog posts list page
 - [ ] fix blog posts footer
 - [ ] add images to blog posts and sitemap
 - [ ] custom 404
