@@ -14,7 +14,7 @@ interface Props {
 
 const Tagsub: React.FC<Props> = ({ sub }) => {
   return (
-    <motion.div
+    <motion.h2
       id="subtitle"
       className={`${main.className} mx-auto mb-5 mt-0 w-fit cursor-grab select-none self-center text-center text-4xl text-white drop-shadow-xl active:cursor-grabbing md:text-5xl lg:text-6xl`}
       drag
@@ -27,7 +27,7 @@ const Tagsub: React.FC<Props> = ({ sub }) => {
       transition={{ duration: 1, type: "spring" }}
     >
       {sub}
-    </motion.div>
+    </motion.h2>
   );
 };
 

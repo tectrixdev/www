@@ -17,7 +17,7 @@ interface Props {
 const Subtitle: React.FC<Props> = ({ title }) => {
   return (
     <div>
-      <motion.p
+      <motion.h3
         className={`${main.className} mt-14 snap-y text-center text-4xl text-white`}
         id={`Sub.${title}`}
         initial={{
@@ -33,7 +33,7 @@ const Subtitle: React.FC<Props> = ({ title }) => {
         transition={{ duration: 1.5, type: "spring" }}
       >
         {title}
-      </motion.p>
+      </motion.h3>
       <Divider />
     </div>
   );

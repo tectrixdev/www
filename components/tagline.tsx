@@ -15,7 +15,7 @@ interface Props {
 
 const Tagline: React.FC<Props> = ({ line }) => {
   return (
-    <motion.div
+    <motion.h1
       id="tagline"
       className={`${main.className} mx-auto mb-5 mt-10 w-fit cursor-grab select-none self-center text-center text-6xl text-white drop-shadow-xl active:cursor-grabbing md:text-7xl lg:text-8xl`}
       drag
@@ -28,7 +28,7 @@ const Tagline: React.FC<Props> = ({ line }) => {
       transition={{ duration: 1, type: "spring" }}
     >
       {line}
-    </motion.div>
+    </motion.h1>
   );
 };
 
