@@ -5,7 +5,7 @@ import Divider from "@/components/divider";
 import React from "react";
 import fs from "fs";
 import path from "path";
-import GooeyNav from "@/components/GooeyNav";
+import Navbar from "@/components/navbar";
 
 const postsDirectory = path.join(process.cwd(), "content");
 const postFiles = fs.readdirSync(postsDirectory);
@@ -41,6 +41,7 @@ const BlogPage: React.FC = () => {
     <main>
       <Tagline line="Blog Posts" />
       <Divider />
+      <Navbar items={[{ label: "Home", url: "/" }]} />
       <Content>
         <div id="cards" className="grid gap-10 lg:grid-cols-3">
           {blogPosts.map((post) => (
