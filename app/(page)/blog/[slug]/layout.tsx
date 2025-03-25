@@ -11,6 +11,7 @@ import Tagline from "@/components/tagline";
 import Tagsub from "@/components/tagsub";
 import Divider from "@/components/divider";
 import PostInfo from "@/components/postinfo";
+import Navbar from "@/components/navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -55,6 +56,7 @@ export default async function RootLayout({
         <MotionConfig reducedMotion="user">
           <Tagline line={metadata.title} />
           <Tagsub sub={metadata.sub} />
+          <Navbar items={[{ label: "Home", url: "/" }]} />
           <Divider />
           <PostInfo author={metadata.author} date={metadata.date} />
           <Content>{children}</Content>

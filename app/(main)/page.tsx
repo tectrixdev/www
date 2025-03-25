@@ -11,6 +11,7 @@ import Content from "@/components/content";
 import Banner from "@/components/banner";
 import Subtitle from "@/components/subtitle";
 import PictureGallery from "@/components/picturegallery";
+import Navbar from "@/components/navbar";
 
 const main = Rubik_Glitch({
   subsets: ["latin"],
@@ -24,6 +25,11 @@ export default function Home() {
       <Banner />
       <Tagline line="TecTrix" />
       <Tagsub sub="Joran Hennion" />
+      <Navbar
+        items={[
+          { label: "Blog", url: "/blog" },
+        ]}
+      />
       <Content>
         <Subtitle title="Photography" />
         <PictureGallery />

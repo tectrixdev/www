@@ -1,7 +1,7 @@
 # My website
 ## [tectrix.dev](https://tectrix.dev)
 
-V.0.3.6 - blog posts list
+V.0.4.0 - navigation update
 
 TODO:
 - [x] fix breakpoints, content, cards
@@ -12,7 +12,7 @@ TODO:
 - [x] fix md styles - half done, mobile styles size difference | (improvements can be made later)
 - [x] add blog posts list page
 - [x] fix blog posts footer
-- [ ] add navbar
+- [x] add navbar
 - [ ] add images to blog posts and sitemap
 - [ ] custom 404
 - [ ] fix cards and rest of content on main page
