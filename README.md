@@ -16,6 +16,7 @@ TODO:
 - [ ] add images to blog posts and sitemap
 - [ ] custom 404
 - [ ] fix cards and rest of content on main page
+- [ ] about page
 - [ ] fix blog posts unneeded code
 - [ ] fix performance
 - [ ] add opengraph
