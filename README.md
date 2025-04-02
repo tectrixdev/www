@@ -17,5 +17,5 @@ TODO:
 - [ ] custom 404
 - [ ] fix cards and rest of content on main page
 - [ ] fix blog posts unneeded code
-- [ ] fix performance
+- [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
 - [ ] add opengraph
