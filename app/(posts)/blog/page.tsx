@@ -15,7 +15,7 @@ interface BlogPost {
   id: number;
   title: string;
   summary: string;
-  image: string,
+  image: string;
   date: string;
 }
 
@@ -43,7 +43,12 @@ const BlogPage: React.FC = () => {
     <main>
       <Tagline line="Blog Posts" />
       <Divider />
-      <Navbar items={[{ label: "Home", url: "/" }]} />
+      <Navbar
+        items={[
+          { label: "Home", url: "/" },
+          { label: "About", url: "/about" },
+        ]}
+      />
       <Content>
         <div id="cards" className="grid gap-10 lg:grid-cols-3">
           {blogPosts.map((post) => (
@@ -52,7 +57,7 @@ const BlogPage: React.FC = () => {
               description={`${post.summary} - ${post.date}`}
               button="view post"
               projectUrl={post.url}
-              imageUrl={`.${ post.image }`}
+              imageUrl={`.${post.image}`}
               color={(post.id + 10) * 234}
               key={post.id}
             />

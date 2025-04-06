@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 p {
   @apply lg:text-lg mb-4;
 }
@@ -60,4 +56,23 @@ li {
 
 img {
   @apply mx-auto rounded-lg w-full lg:w-3/5 md:w-4/5;
+}
+
+@supports (scrollbar-color: auto) {
+  :root {
+    scrollbar-color: white #111615;
+    scrollbar-width: thin;
+  }
+}
+
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar {
+    background: #111615;
+    width: 0.5rem;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
 }

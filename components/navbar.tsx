@@ -30,11 +30,11 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
         {items.map((item, index) => (
           <li
             key={index}
-            className={`mt-5 list-none ${rubikMonoOne.className}`}
+            className={`mx-0 mt-5 list-none ${rubikMonoOne.className}`}
           >
             <Link
               href={item.url}
-              className="mx-2 rounded-lg border-white bg-white px-5 py-3 text-black backdrop-blur-lg transition-all hover:border-2 hover:bg-black/25 hover:px-10 hover:text-white"
+              className="mx-1 rounded-lg border-white bg-white px-5 py-3 text-black backdrop-blur-lg transition-all hover:border-2 hover:bg-black/25 hover:px-10 hover:text-white md:mx-2"
             >
               {item.label}
             </Link>

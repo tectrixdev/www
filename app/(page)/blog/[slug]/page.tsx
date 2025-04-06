@@ -1,4 +1,5 @@
 import Posts from "./postlist";
+import "./blog.css";
 
 export default async function Page({
   params,

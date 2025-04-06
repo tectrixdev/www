@@ -1,6 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./blog.css";
-import "@/app/globals.css";
 import Scrollbody from "@/components/scrollbg";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
@@ -61,6 +60,7 @@ export default async function RootLayout({
             items={[
               { label: "Home", url: "/" },
               { label: "Blog", url: "/blog" },
+              { label: "About", url: "/about" },
             ]}
           />
           <Divider />
