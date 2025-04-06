@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <Link
       className="select-none"
-      href="https://raw.githubusercontent.com/tectrixdev/portfolio/refs/heads/main/LICENSE"
+      href="https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/LICENSE"
       title="License (info)"
       draggable={false}
     >

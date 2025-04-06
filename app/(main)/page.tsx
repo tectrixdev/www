@@ -38,7 +38,7 @@ export default function Home() {
           title="My portfolio"
           description="You are right here ;)"
           imageUrl="this.webp"
-          projectUrl="https://github.com/tectrixdev/portfolio"
+          projectUrl="https://github.com/tectrixdev/www"
           button="view source"
           color={-90}
         />
