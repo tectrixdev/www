@@ -2,7 +2,7 @@
 
 ## [tectrix.dev](https://www.tectrix.dev)
 
-V.0.4.3 - general improvements
+V.0.7.3 - Home page finalization
 
 TODO:
 
@@ -17,8 +17,8 @@ TODO:
 - [x] add navbar
 - [x] add images to blog posts and sitemap
 - [x] custom 404 - default is fine
-- [ ] fix cards and rest of content on main page
+- [x] fix cards and rest of content on main page
 - [ ] about page
+- [ ] add opengraph
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
-- [ ] add opengraph
