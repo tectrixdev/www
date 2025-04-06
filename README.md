@@ -1,5 +1,5 @@
 # My website
-## [tectrix.dev](https://tectrix.dev)
+## [tectrix.dev](https://www.tectrix.dev)
 
 V.0.4.0 - navigation update
 
