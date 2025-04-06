@@ -12,7 +12,7 @@ TODO:
 - [x] fix animation loop glitches
 - [x] generate sitemap based on posts
 - [x] fix md styles - half done, mobile styles size difference | (improvements can be made later)
-- [x] add blog posts list page
+- [x] hadd blog posts list page
 - [x] fix blog posts footer
 - [x] add navbar
 - [x] add images to blog posts and sitemap

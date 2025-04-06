@@ -26,7 +26,12 @@ export default function Home() {
       <Banner />
       <Tagline line="TecTrix" />
       <Tagsub sub="Joran Hennion" />
-      <Navbar items={[{ label: "Blog", url: "/blog" }]} />
+      <Navbar
+        items={[
+          { label: "Blog", url: "/blog" },
+          { label: "About", url: "/about" },
+        ]}
+      />
       <Content>
         <Subtitle title="Photography" />
         <PictureGallery />

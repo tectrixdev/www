@@ -2,56 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 p {
-  @apply lg:text-lg mb-4;
+  @apply lg:!text-lg !mb-4;
 }
 
 hr {
-  @apply mx-auto my-5 h-0.5 w-[40vw] self-center bg-white opacity-65 shadow-lg backdrop-blur-lg lg:h-1;
+  @apply !mx-auto !my-5 !h-0.5 !w-[40vw] !self-center !bg-white !opacity-65 !shadow-lg !backdrop-blur-lg lg:!h-1;
 }
 
 h1 {
-  @apply text-5xl md:text-6xl font-bold text-center my-5;
+  @apply !text-5xl md:!text-6xl !font-bold !text-center !my-5;
 }
 
 h2 {
-  @apply text-4xl md:text-5xl font-bold text-center my-5;
+  @apply !text-4xl md:!text-5xl !font-bold !text-center !my-5;
 }
 
 h3 {
-  @apply text-3xl md:text-4xl font-bold text-center my-5;
+  @apply !text-3xl md:!text-4xl !font-bold !text-center !my-5;
 }
 
 h4 {
-  @apply text-2xl md:text-3xl font-bold text-center my-5;
+  @apply !text-2xl md:!text-3xl !font-bold !text-center !my-5;
 }
 
 h5 {
-  @apply text-xl md:text-2xl font-bold text-center my-5;
+  @apply !text-xl md:!text-2xl !font-bold !text-center !my-5;
 }
 
 h6 {
-  @apply text-lg md:text-xl font-bold text-center my-5;
+  @apply !text-lg md:!text-xl !font-bold !text-center !my-5;
 }
 
 pre {
-  @apply bg-gray-900 border-gray-700 border-2 w-full p-5 my-5 rounded-md;
+  @apply !bg-gray-900 !border-gray-700 !border-2 !w-full !p-5 !my-5 !rounded-md;
 }
 
 code {
-  @apply font-mono bg-gray-900 rounded-md m-1 p-0.5;
+  @apply !font-mono !bg-gray-900 !rounded-md !m-1 !p-0.5;
 }
 
 blockquote {
-  @apply border-l-4 bg-gray-900/50 border-gray-700 p-5 my-5 font-bold;
+  @apply !border-l-4 !bg-gray-900/50 !border-gray-700 !p-5 !my-5 !font-bold;
 }
 
 .language-bash {
-  @apply text-green-400 font-bold;
+  @apply !text-green-400 !font-bold;
 }
 
 li {
@@ -59,5 +55,5 @@ li {
 }
 
 img {
-  @apply mx-auto rounded-lg w-full lg:w-3/5 md:w-4/5;
+  @apply !mx-auto !rounded-lg !w-full lg:!w-3/5 md:!w-4/5;
 }

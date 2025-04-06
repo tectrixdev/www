@@ -61,6 +61,7 @@ export default async function RootLayout({
             items={[
               { label: "Home", url: "/" },
               { label: "Blog", url: "/blog" },
+              { label: "About", url: "/about" },
             ]}
           />
           <Divider />
