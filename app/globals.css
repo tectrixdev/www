@@ -9,7 +9,7 @@ body {
 @supports (scrollbar-color: auto) {
   :root {
     scrollbar-color: white #111615;
-    scrollbar-width: 1px;
+    scrollbar-width: thin;
   }
 }
 
@@ -17,7 +17,7 @@ body {
 @supports selector(::-webkit-scrollbar) {
   ::-webkit-scrollbar {
     background: #111615;
-    width:1px;
+    width:0.5rem;
   }
 
   ::-webkit-scrollbar-thumb {
