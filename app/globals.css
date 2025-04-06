@@ -6,23 +6,21 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* width */
-::-webkit-scrollbar {
-  width: 1px;
+@supports (scrollbar-color: auto) {
+  :root {
+    scrollbar-color: white #111615;
+    scrollbar-width: 1px;
+  }
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #111615;
-}
+/* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
+@supports selector(::-webkit-scrollbar) {
+  ::-webkit-scrollbar {
+    background: #111615;
+    width:1px;
+  }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ffffff;
+  ::-webkit-scrollbar-thumb {
+    background: white;
+  }
 }
-
-/* Handle on hover 
-::-webkit-scrollbar-thumb:hover {
-  background: #2d2f5c;
-}
-*/
