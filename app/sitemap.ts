@@ -11,7 +11,8 @@ const postSitemaps: MetadataRoute.Sitemap = await Promise.all(
     const mod = await import(`@/content/${postSlug}.mdx`);
     const metadata = mod.matter;
     return {
-      url: `https://tectrix.dev/blog/${postSlug}`,
+      url: `https://www.tectrix.dev/blog/${postSlug}`,
+      images: [`https://www.tectrix.dev${metadata.image}`],
       lastModified: new Date(metadata.date),
       changeFrequency: "monthly",
       priority: 0.8,
@@ -22,13 +23,13 @@ const postSitemaps: MetadataRoute.Sitemap = await Promise.all(
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://tectrix.dev",
+      url: "https://www.tectrix.dev",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://tectrix.dev/blog",
+      url: "https://www.tectrix.dev/blog",
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,

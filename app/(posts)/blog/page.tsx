@@ -15,6 +15,7 @@ interface BlogPost {
   id: number;
   title: string;
   summary: string;
+  image: string,
   date: string;
 }
 
@@ -28,6 +29,7 @@ const posts = await Promise.all(
       id: postFiles.indexOf(file),
       title: metadata.title,
       summary: metadata.sub,
+      image: metadata.image,
       date: new Date(metadata.date).toLocaleDateString(),
     };
   }),
@@ -50,7 +52,7 @@ const BlogPage: React.FC = () => {
               description={`${post.summary} - ${post.date}`}
               button="view post"
               projectUrl={post.url}
-              imageUrl="scrollbg.webp"
+              imageUrl={`.${ post.image }`}
               color={(post.id + 10) * 234}
               key={post.id}
             />

@@ -13,7 +13,7 @@ TODO:
 - [x] add blog posts list page
 - [x] fix blog posts footer
 - [x] add navbar
-- [ ] add images to blog posts and sitemap
+- [x] add images to blog posts and sitemap
 - [ ] custom 404
 - [ ] fix cards and rest of content on main page
 - [ ] fix blog posts unneeded code
