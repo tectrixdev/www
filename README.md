@@ -1,5 +1,5 @@
 # My website
-## [tectrix.dev](https://tectrix.dev)
+## [tectrix.dev](https://www.tectrix.dev)
 
 V.0.4.0 - navigation update
 
@@ -16,6 +16,7 @@ TODO:
 - [x] add images to blog posts and sitemap
 - [ ] custom 404
 - [ ] fix cards and rest of content on main page
+- [ ] about page
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
 - [ ] add opengraph
