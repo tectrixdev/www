@@ -16,7 +16,7 @@ TODO:
 - [x] fix blog posts footer
 - [x] add navbar
 - [x] add images to blog posts and sitemap
-- [x] custom 404 - default is fine, added the bg
+- [x] custom 404 - default is fine
 - [ ] fix cards and rest of content on main page
 - [ ] about page
 - [ ] fix blog posts unneeded code
