@@ -7,6 +7,10 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import FooterShadow from "@/components/footershadow";
 import Footer from "@/components/footer";
 import { MotionConfig } from "motion/react";
+import Tagline from "@/components/tagline";
+import Divider from "@/components/divider";
+import Navbar from "@/components/navbar";
+import Content from "@/components/blog_content";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -58,7 +62,18 @@ export default function RootLayout({
         <meta name="language" content="English" />
       </head>
       <Scrollbody>
-        <MotionConfig reducedMotion="user">{children}</MotionConfig>
+        <MotionConfig reducedMotion="user">
+          <main>
+            <Tagline line="About me" />
+            <Navbar
+              items={[
+                { url: "/", label: "home" },
+                { url: "/blog", label: "blog" },
+              ]}
+            />
+            <Content>{children}</Content>
+          </main>
+        </MotionConfig>
         <Analytics />
         <SpeedInsights />
         <FooterShadow />

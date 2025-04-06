@@ -18,7 +18,7 @@ TODO:
 - [x] add images to blog posts and sitemap
 - [x] custom 404 - default is fine
 - [x] fix cards and rest of content on main page
-- [ ] about page
+- [ ] about page in markdown
 - [ ] add opengraph
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
