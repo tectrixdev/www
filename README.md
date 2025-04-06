@@ -1,9 +1,11 @@
 # My website
+
 ## [tectrix.dev](https://www.tectrix.dev)
 
-V.0.4.0 - navigation update
+V.0.4.3 - general improvements
 
 TODO:
+
 - [x] fix breakpoints, content, cards
 - [x] image fullscreen popup
 - [x] fix scrollbar glitches
@@ -14,7 +16,7 @@ TODO:
 - [x] fix blog posts footer
 - [x] add navbar
 - [x] add images to blog posts and sitemap
-- [ ] custom 404
+- [x] custom 404 - default is fine, added the bg
 - [ ] fix cards and rest of content on main page
 - [ ] about page
 - [ ] fix blog posts unneeded code

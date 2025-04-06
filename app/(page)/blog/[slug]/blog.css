@@ -61,24 +61,3 @@ li {
 img {
   @apply mx-auto rounded-lg w-full lg:w-3/5 md:w-4/5;
 }
-
-/* width */
-::-webkit-scrollbar {
-  width: 1px;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #111615;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #ffffff;
-}
-
-/* Handle on hover 
-::-webkit-scrollbar-thumb:hover {
-  background: #2d2f5c;
-}
-*/

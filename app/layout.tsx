@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "@/app/globals.css";
-import Scrollbody from "@/components/scrollbg";
+import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import FooterShadow from "@/components/footershadow";
-import Footer from "@/components/footer";
 import { MotionConfig } from "motion/react";
 
 const geistSans = Geist({
@@ -19,20 +16,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Joran Hennion",
-  description: "TecTrix'/joran's portofolio",
+  title: "Error - tectrix.dev",
+  description: "An error occured.",
   generator: "Next.js",
   applicationName: "Tectrix.dev",
   referrer: "origin-when-cross-origin",
-  keywords: [
-    "Joran Hennion",
-    " jojommeke",
-    " tectrix",
-    " TecTrix",
-    " tectrix.dev",
-    " Joran",
-    " Hennion",
-  ],
   authors: [{ name: "Joran Hennion" }],
   creator: "Joran Hennion",
   publisher: "Joran Hennion",
@@ -53,17 +41,14 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="darkreader-lock" />
-        <meta name="robots" content="index, follow" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </head>
-      <Scrollbody>
+      <body className="overflow-none h-screen w-screen content-center bg-[url(/scrollbg.webp)] bg-cover bg-center bg-no-repeat text-white antialiased">
         <MotionConfig reducedMotion="user">{children}</MotionConfig>
         <Analytics />
         <SpeedInsights />
-        <FooterShadow />
-        <Footer />
-      </Scrollbody>
+      </body>
     </html>
   );
 }
