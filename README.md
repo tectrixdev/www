@@ -13,10 +13,10 @@ TODO:
 - [x] add blog posts list page
 - [x] fix blog posts footer
 - [x] add navbar
-- [ ] add images to blog posts and sitemap
+- [x] add images to blog posts and sitemap
 - [ ] custom 404
 - [ ] fix cards and rest of content on main page
 - [ ] about page
 - [ ] fix blog posts unneeded code
-- [ ] fix performance
+- [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
 - [ ] add opengraph

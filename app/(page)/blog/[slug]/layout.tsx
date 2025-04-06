@@ -40,7 +40,7 @@ export default async function RootLayout({
     metadata.keywords +
     `, tectrix.dev, blog, tectrix blog, tectrix blog page, tectrix ${metadata.title}, ${metadata.title}, tectrix blog post ${metadata.title}, ${metadata.sub}`;
   return (
-    <html lang="en" className="h-full">
+    <html lang="en">
       <head>
         <meta name="darkreader-lock" />
         <title>{title}</title>
@@ -52,11 +52,16 @@ export default async function RootLayout({
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </head>
-      <Scrollbody>
+      <Scrollbody className="pt-10 backdrop-blur-lg">
         <MotionConfig reducedMotion="user">
           <Tagline line={metadata.title} />
           <Tagsub sub={metadata.sub} />
-          <Navbar items={[{ label: "Home", url: "/" }]} />
+          <Navbar
+            items={[
+              { label: "Home", url: "/" },
+              { label: "Blog", url: "/blog" },
+            ]}
+          />
           <Divider />
           <PostInfo author={metadata.author} date={metadata.date} />
           <Content>{children}</Content>
