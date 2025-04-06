@@ -20,5 +20,6 @@ TODO:
 - [x] fix cards and rest of content on main page
 - [ ] about page in markdown
 - [ ] add opengraph
+- [ ] fix tagline overflow on mobile
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
