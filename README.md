@@ -2,7 +2,7 @@
 
 ## [tectrix.dev](https://www.tectrix.dev)
 
-V.0.7.3 - Home page finalization
+V.0.9.8 - almost there
 
 TODO:
 
@@ -22,5 +22,8 @@ TODO:
 - [x] finally remove top disclaimer
 - [ ] add opengraph
 - [ ] fix tagline overflow on mobile
+- site finished
+
+- extra:
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
