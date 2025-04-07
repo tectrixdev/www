@@ -25,7 +25,7 @@ const posts = await Promise.all(
     const mod = await import(`@/content/${postSlug}.mdx`);
     const metadata = mod.matter;
     return {
-      url: `blog/${postSlug}`,
+      url: `/blog/${postSlug}`,
       id: postFiles.indexOf(file),
       title: metadata.title,
       summary: metadata.sub,
@@ -57,7 +57,7 @@ const BlogPage: React.FC = () => {
               description={`${post.summary} - ${post.date}`}
               button="view post"
               projectUrl={post.url}
-              imageUrl={`.${post.image}`}
+              imageUrl={`blog/${post.image}`}
               color={(post.id + 10) * 234}
               key={post.id}
             />

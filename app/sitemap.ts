@@ -12,7 +12,7 @@ const postSitemaps: MetadataRoute.Sitemap = await Promise.all(
     const metadata = mod.matter;
     return {
       url: `https://www.tectrix.dev/blog/${postSlug}`,
-      images: [`https://www.tectrix.dev${metadata.image}`],
+      images: [`https://www.tectrix.dev/blog/${metadata.image}`],
       lastModified: new Date(metadata.date),
       changeFrequency: "monthly",
       priority: 0.8,
