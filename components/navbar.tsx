@@ -34,7 +34,7 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
           >
             <Link
               href={item.url}
-              className="mx-1 rounded-lg border-white bg-white px-5 py-3 text-black backdrop-blur-lg transition-all hover:border-2 hover:bg-black/25 hover:px-10 hover:text-white md:mx-2"
+              className="mx-1 rounded-lg border-white bg-white px-5 py-3 text-black no-underline backdrop-blur-lg transition-all hover:border-2 hover:bg-black/25 hover:px-10 hover:text-white md:mx-2"
             >
               {item.label}
             </Link>

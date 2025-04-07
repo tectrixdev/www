@@ -61,7 +61,7 @@ export default function RootLayout({
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
       </head>
-      <Scrollbody>
+      <Scrollbody className="backdrop-blur-lg">
         <MotionConfig reducedMotion="user">
           <main>
             <Tagline line="About me" />
