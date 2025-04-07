@@ -14,8 +14,8 @@ const postSitemaps: MetadataRoute.Sitemap = await Promise.all(
       url: `https://www.tectrix.dev/blog/${postSlug}`,
       images: [`https://www.tectrix.dev/blog/${metadata.image}`],
       lastModified: new Date(metadata.date),
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "weekly",
+      priority: 0.7,
     };
   }),
 );
@@ -25,14 +25,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://www.tectrix.dev",
       lastModified: new Date(),
-      changeFrequency: "daily",
+      changeFrequency: "weekly",
       priority: 1,
+    },
+    {
+      url: "https://www.tectrix.dev/about",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
     },
     {
       url: "https://www.tectrix.dev/blog",
       lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.9,
+      changeFrequency: "weekly",
+      priority: 0.8,
     },
     ...postSitemaps,
   ];
