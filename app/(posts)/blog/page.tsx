@@ -25,7 +25,7 @@ const posts = await Promise.all(
     const mod = await import(`@/content/${postSlug}.mdx`);
     const metadata = mod.matter;
     return {
-      url: `/blog/${postSlug}`,
+      url: `blog/${postSlug}`,
       id: postFiles.indexOf(file),
       title: metadata.title,
       summary: metadata.sub,
