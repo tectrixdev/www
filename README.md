@@ -21,7 +21,7 @@ TODO:
 - [x] about page in markdown
 - [x] finally remove top disclaimer
 - [x] add opengraph
-- [ ] fix tagline overflow on mobile
+- [x] fix tagline overflow on mobile - kinda
 - site finished
 
 - extra:
