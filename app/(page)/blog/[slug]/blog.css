@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+a {
+  @apply underline text-blue-400 hover:text-blue-700 transition-colors duration-300;
+}
+
 p {
   @apply lg:text-lg mb-4;
 }
@@ -35,7 +39,7 @@ h6 {
 }
 
 pre {
-  @apply bg-gray-900 border-gray-700 border-2 w-full p-5 my-5 rounded-md;
+  @apply bg-gray-900 border-gray-700 border-2 w-full p-5 my-5 rounded-md overflow-x-scroll;
 }
 
 code {

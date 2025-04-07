@@ -2,7 +2,7 @@
 
 ## [tectrix.dev](https://www.tectrix.dev)
 
-V.0.7.3 - Home page finalization
+V.0.9.8 - almost there
 
 TODO:
 
@@ -18,8 +18,12 @@ TODO:
 - [x] add images to blog posts and sitemap
 - [x] custom 404 - default is fine
 - [x] fix cards and rest of content on main page
-- [ ] about page in markdown
+- [x] about page in markdown
+- [x] finally remove top disclaimer
 - [ ] add opengraph
 - [ ] fix tagline overflow on mobile
+- site finished
+
+- extra:
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results

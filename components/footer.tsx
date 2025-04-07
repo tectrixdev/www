@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer: React.FC = () => {
   return (
     <Link
-      className="select-none"
+      className="select-none no-underline"
       href="https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/LICENSE"
       title="License (info)"
       draggable={false}
