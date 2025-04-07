@@ -18,8 +18,8 @@ TODO:
 - [x] add images to blog posts and sitemap
 - [x] custom 404 - default is fine
 - [x] fix cards and rest of content on main page
-- [ ] about page in markdown
-- [ ] finally remove top disclaimer
+- [x] about page in markdown
+- [x] finally remove top disclaimer
 - [ ] add opengraph
 - [ ] fix tagline overflow on mobile
 - [ ] fix blog posts unneeded code
