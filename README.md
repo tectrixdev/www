@@ -20,7 +20,7 @@ TODO:
 - [x] fix cards and rest of content on main page
 - [x] about page in markdown
 - [x] finally remove top disclaimer
-- [ ] add opengraph
+- [x] add opengraph
 - [ ] fix tagline overflow on mobile
 - site finished
 
