@@ -2,7 +2,7 @@
 
 ## [tectrix.dev](https://www.tectrix.dev)
 
-V.0.9.8 - almost there
+V.0.1.0 - initially done.
 
 TODO:
 
