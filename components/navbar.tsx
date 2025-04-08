@@ -33,6 +33,7 @@ const Navbar: React.FC<NavbarProps> = ({ items }) => {
             className={`mx-0 mt-5 list-none ${rubikMonoOne.className}`}
           >
             <Link
+              prefetch={false}
               href={item.url}
               className="mx-1 rounded-lg border-white bg-white px-5 py-3 text-black no-underline backdrop-blur-lg transition-all hover:border-2 hover:bg-black/25 hover:px-10 hover:text-white md:mx-2"
             >
