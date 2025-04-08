@@ -67,6 +67,7 @@ export default async function RootLayout({
         <meta name="description" content={metadata.sub} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content={metadata.author} />
+        <link rel="canonical" href={`https://www.tectrix.dev/blog/${slug}`} />
       </head>
       <Scrollbody className="pt-10 backdrop-blur-lg">
         <MotionConfig reducedMotion="user">
