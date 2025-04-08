@@ -60,7 +60,7 @@ export default async function RootLayout({
     metadata.keywords +
     `, tectrix.dev, blog, tectrix blog, tectrix blog page, tectrix ${metadata.title}, ${metadata.title}, tectrix blog post ${metadata.title}, ${metadata.sub}`;
   return (
-    <html lang="en">
+    <>
       <head>
         <title>{title}</title>
         <meta name="title" content={title} />
@@ -89,6 +89,6 @@ export default async function RootLayout({
         <FooterShadow />
         <Footer />
       </Scrollbody>
-    </html>
+    </>
   );
 }
