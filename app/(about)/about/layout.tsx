@@ -27,7 +27,6 @@ export const metadata: Metadata = {
   description: "Joran Hennion",
   generator: "Next.js",
   applicationName: "Tectrix.dev",
-  referrer: "origin-when-cross-origin",
   keywords: [
     "Joran Hennion",
     " jojommeke",

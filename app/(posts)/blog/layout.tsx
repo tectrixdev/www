@@ -23,7 +23,6 @@ export const metadata: Metadata = {
   description: "blog posts on tectrix.dev | Joran Hennion's blog",
   generator: "Next.js",
   applicationName: "Blog - tectrix.dev",
-  referrer: "origin-when-cross-origin",
   keywords: [
     "Joran Hennion",
     " jojommeke",
