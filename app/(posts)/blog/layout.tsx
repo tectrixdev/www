@@ -64,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <html lang="en " className="overflow-x-hidden">
       <head>
         <meta name="darkreader-lock" />
         <meta name="robots" content="index, follow" />
@@ -78,6 +78,6 @@ export default function RootLayout({
         <FooterShadow />
         <Footer />
       </Scrollbody>
-    </>
+    </html>
   );
 }

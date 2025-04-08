@@ -68,7 +68,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <html lang="en " className="overflow-x-hidden">
       <head></head>
       <Scrollbody className="backdrop-blur-lg">
         <MotionConfig reducedMotion="user">
@@ -88,6 +88,6 @@ export default function RootLayout({
         <FooterShadow />
         <Footer />
       </Scrollbody>
-    </>
+    </html>
   );
 }
