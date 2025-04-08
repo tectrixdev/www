@@ -12,6 +12,8 @@ import Tagsub from "@/components/tagsub";
 import Divider from "@/components/divider";
 import PostInfo from "@/components/postinfo";
 import Navbar from "@/components/navbar";
+import type { Metadata } from "next";
+import type { Viewport } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,6 +24,24 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+// static metadata
+export const metadata: Metadata = {
+  generator: "Next.js",
+  applicationName: "Blog - tectrix.dev",
+  robots: "index, follow",
+  publisher: "Joran Hennion",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL("https://www.tectrix.dev"),
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
+};
 
 export default async function RootLayout({
   children,
@@ -42,15 +62,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <head>
-        <meta name="darkreader-lock" />
         <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={metadata.sub} />
         <meta name="keywords" content={keywords} />
         <meta name="author" content={metadata.author} />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
       </head>
       <Scrollbody className="pt-10 backdrop-blur-lg">
         <MotionConfig reducedMotion="user">
