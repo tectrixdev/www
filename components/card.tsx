@@ -77,7 +77,7 @@ const Card: React.FC<Props> = ({
             href={projectUrl}
             passHref
             rel="noopener noreferrer"
-            className={`bg-blur-lg border-2hite inline-block w-full rounded-lg border-2 p-2 text-center text-white no-underline transition-transform hover:rotate-3 ${second.className}`}
+            className={`bg-blur-lg border-2hite inline-block w-full rounded-lg border-2 p-2 text-center text-white transition-transform hover:rotate-3 ${second.className}`}
           >
             {button}
           </Link>
