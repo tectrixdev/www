@@ -49,39 +49,37 @@ const Card: React.FC<Props> = ({
         scale: 1,
       }}
       transition={{ duration: 1.5, type: "spring" }}
-      className="h-auto w-full max-w-xs overflow-hidden rounded-xl border-2 bg-black/25 p-5 shadow-2xl"
+      className="group h-full w-full max-w-xs overflow-hidden rounded-xl border-2 bg-black/25 shadow-2xl"
       style={{ backdropFilter: `hue-rotate(${color}deg) blur(12px)` }}
     >
-      <Image
-        src={`/${imageUrl}`}
-        alt={title}
-        className="h-36 w-full rounded-lg border border-white object-cover transition-transform hover:-rotate-3"
-        width={400}
-        height={400}
-      />
-      <div className="p-4">
-        <div
-          className={`text-center text-white ${main.className} mb-7 text-2xl`}
+      <Link href={projectUrl}>
+        <Image
+          src={`/${imageUrl}`}
+          alt={title}
+          className="h-36 w-full border-b-2 border-white object-cover transition-transform hover:scale-[1.15] group-odd:hover:-rotate-3 group-even:hover:rotate-3"
+          width={400}
+          height={400}
+        />
+      </Link>
+      <div id={`innercontent.${title}`} className="p-4">
+        <h4
+          className={`text-center text-white ${main.className} p-4 text-2xl`}
           id={`title.${title}`}
         >
           {title}
-        </div>
-        <div
-          className={`my-2 text-center text-sm font-bold text-white ${second.className}`}
+        </h4>
+        <p
+          className={`text-center text-sm font-bold text-white ${second.className}`}
           id={`description.${title}`}
         >
           {description}
-        </div>
-        <div className="mt-4 text-center">
-          <Link
-            href={projectUrl}
-            passHref
-            rel="noopener noreferrer"
-            className={`bg-blur-lg border-2hite inline-block w-full rounded-lg border-2 p-2 text-center text-white transition-transform hover:rotate-3 ${second.className}`}
-          >
-            {button}
-          </Link>
-        </div>
+        </p>
+        <Link
+          href={projectUrl}
+          className={`bg-blur-lg mt-8 flex h-full w-full flex-col border-t-2 border-dashed p-3 text-center text-white transition-all ${second.className}`}
+        >
+          {button}
+        </Link>
       </div>
     </motion.div>
   );
