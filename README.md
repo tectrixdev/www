@@ -2,7 +2,7 @@
 
 ## [tectrix.dev](https://www.tectrix.dev)
 
-V.0.9.8 - almost there
+V.0.1.6 - SEO update
 
 TODO:
 
@@ -21,9 +21,10 @@ TODO:
 - [x] about page in markdown
 - [x] finally remove top disclaimer
 - [x] add opengraph
-- [x] fix tagline overflow on mobile - kinda
+- [x] fix tagline overflow on mobile
 - site finished
 
 - extra:
+- [x] fix all metadata
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results

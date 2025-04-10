@@ -21,8 +21,8 @@ const Tagline: React.FC<Props> = ({ line }) => {
       drag
       dragSnapToOrigin
       dragConstraints={{ top: 10, left: 10, right: 10, bottom: 10 }}
-      whileHover={{ scale: 0.9 }}
-      whileTap={{ scale: 0.8 }}
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
       initial={{ y: -100 }}
       whileInView={{ y: 0 }}
       transition={{ duration: 1, type: "spring" }}

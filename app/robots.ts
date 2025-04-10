@@ -5,7 +5,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
+      crawlDelay: 60,
     },
-    sitemap: "https://tectrix.dev/sitemap.xml",
+    sitemap: "https://www.tectrix.dev/sitemap.xml",
+    host: "https://www.tectrix.dev",
   };
 }

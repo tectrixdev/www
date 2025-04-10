@@ -7,6 +7,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import FooterShadow from "@/components/footershadow";
 import Footer from "@/components/footer";
 import { MotionConfig } from "motion/react";
+import type { Viewport } from "next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,20 +24,25 @@ export const metadata: Metadata = {
   description: "blog posts on tectrix.dev | Joran Hennion's blog",
   generator: "Next.js",
   applicationName: "Blog - tectrix.dev",
-  referrer: "origin-when-cross-origin",
   keywords: [
     "Joran Hennion",
-    " jojommeke",
-    " tectrix",
-    " TecTrix",
-    " tectrix.dev",
-    " Joran",
-    " Hennion",
-    " blog",
-    " blog posts",
-    " tectrix blog",
-    " Joran Hennion blog",
+    "jojommeke",
+    "tectrix",
+    "TecTrix",
+    "tectrix.dev",
+    "Joran",
+    "Hennion",
+    "web development",
+    "frontend developer",
+    "portfolio",
+    "creative projects",
+    "Next.js projects",
+    "React developer",
   ],
+  robots: "index, follow",
+  alternates: {
+    canonical: "https://www.tectrix.dev/blog",
+  },
   authors: [{ name: "Joran Hennion" }],
   creator: "Joran Hennion",
   publisher: "Joran Hennion",
@@ -45,7 +51,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://tectrix.dev/blog/"),
+  metadataBase: new URL("https://www.tectrix.dev"),
+};
+
+export const viewport: Viewport = {
+  colorScheme: "dark",
 };
 
 export default function RootLayout({
@@ -54,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en " className="overflow-x-hidden">
       <head>
         <meta name="darkreader-lock" />
         <meta name="robots" content="index, follow" />

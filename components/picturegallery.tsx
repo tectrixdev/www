@@ -94,7 +94,7 @@ const PictureGallery = () => {
                   />
                 </button>
                 <div
-                  className="overflow-hidden rounded-lg border-2 border-white p-1 backdrop-blur-lg"
+                  className="overflow-hidden rounded-lg border-2 border-white backdrop-blur-lg"
                   id="popup"
                 >
                   <Image
