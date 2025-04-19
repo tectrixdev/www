@@ -36,7 +36,7 @@ const posts = await Promise.all(
 );
 
 const blogPosts: BlogPost[] = [...posts];
-console.log(blogPosts);
+console.log(blogPosts); // yes I'm leaving this in on purpose
 
 const BlogPage: React.FC = () => {
   return (

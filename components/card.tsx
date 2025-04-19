@@ -1,3 +1,4 @@
+// TODO: get static imports in here, like with the props, but that doesn't work for blog for example
 "use client";
 import { motion } from "motion/react";
 import { Rubik_Glitch } from "next/font/google";
