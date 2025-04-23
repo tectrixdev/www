@@ -47,12 +47,13 @@ export default function Home() {
           />
           <Card
             title="ADHDO"
-            description="A todo app for people with ADHD. (unfinished)"
+            description="A todo app for people with ADHD. (unfinished, currently being remade)"
             imageUrl="adhdo.png"
             projectUrl="https://github.com/tectrixdev/ADHDO"
             button="view source"
             color={-190}
-          /><Card
+          />
+          <Card
             title="Unplayit"
             description="A project aiming to fix annoying third party ip's from minecraft servers hosted on aternos, with playit, and others. Currently only supports playit hosted servers."
             imageUrl="unplayit.png"
