@@ -19,6 +19,11 @@
         }
       ],
       "destination": "https://www.tectrix.dev/blog/:path*"
+    },
+    {
+      "source": "/",
+      "has": [{ "type": "host", "value": "blog.tectrix.dev" }],
+      "destination": "https://www.tectrix.dev/blog"
     }
   ]
 }
