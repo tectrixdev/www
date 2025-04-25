@@ -13,8 +13,14 @@
     ],
   "rewrites": [
     {
-      "source": "blog.tectrix.dev/:path*",
-      "destination": "https://www.tectrix.dev/blog/:path*"
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "blog.tectrix.dev"
+        }
+      ],
+      "destination": "/blog/:path*"
     }
   ]
 }
