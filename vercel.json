@@ -1,17 +1,15 @@
 {
-    "redirects": [
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
         {
-            "source": "/",
-            "has": [
-                {
-                    "type": "host",
-                    "value": "arcade.tectrix.dev"
-                }
-            ],
-            "destination": "https://www.tectrix.dev/blog/arcade"
+          "type": "host",
+          "value": "arcade.tectrix.dev"
         }
-    ],
-  "rewrites": [
+      ],
+      "destination": "https://www.tectrix.dev/blog/arcade"
+    },
     {
       "source": "/:path*",
       "has": [
