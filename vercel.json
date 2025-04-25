@@ -1,0 +1,20 @@
+{
+    "redirects": [
+        {
+            "source": "/",
+            "has": [
+                {
+                    "type": "host",
+                    "value": "arcade.tectrix.dev"
+                }
+            ],
+            "destination": "https://www.tectrix.dev/blog/arcade"
+        }
+    ],
+  "rewrites": [
+    {
+      "source": "blog.tectrix.dev/:path*",
+      "destination": "https://www.tectrix.dev/blog/:path*"
+    }
+  ]
+}
