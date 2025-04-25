@@ -20,7 +20,7 @@
           "value": "blog.tectrix.dev"
         }
       ],
-      "destination": "/blog/:path*"
+      "destination": "https://www.tectrix.dev/blog/:path*"
     }
   ]
 }
