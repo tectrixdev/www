@@ -74,11 +74,11 @@ export default function Home() {
             color={130}
           />
           <Card
-            title="Arcade uploader"
-            description="A fairly new project which aims to make coding for arcade machines very easy for kids, more info will release soon as I'm working on it!"
-            imageUrl="arcade.png"
-            projectUrl="https://github.com/tectrixdev/arcade_upload"
-            button="view source"
+            title="Arcade machine"
+            description="An arcade machine I made that allows kids to program their own retro games for it using microsoft's arcade makecode"
+            imageUrl="blog/arcade.png"
+            projectUrl="https://arcade.tectrix.dev/"
+            button="view documentation and guide"
             color={-130}
           />
         </CardWrapper>

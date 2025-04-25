@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "motion/react";
 
-const Divider: React.FC = () => {
+export default function Divider() {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
@@ -11,6 +11,4 @@ const Divider: React.FC = () => {
       className="mx-auto my-5 h-0.5 w-[60vw] self-center bg-white opacity-65 shadow-lg backdrop-blur-lg lg:h-1"
     />
   );
-};
-
-export default Divider;
+}

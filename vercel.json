@@ -8,7 +8,8 @@
           "value": "arcade.tectrix.dev"
         }
       ],
-      "destination": "https://www.tectrix.dev/blog/arcade"
+      "destination": "https://www.tectrix.dev/blog/arcade",
+      "permanent": true
     },
     {
       "source": "/:path*",
@@ -18,12 +19,25 @@
           "value": "blog.tectrix.dev"
         }
       ],
-      "destination": "https://www.tectrix.dev/blog/:path*"
+      "destination": "https://www.tectrix.dev/blog/:path*",
+      "permanent": true
     },
     {
       "source": "/",
       "has": [{ "type": "host", "value": "blog.tectrix.dev" }],
-      "destination": "https://www.tectrix.dev/blog"
+      "destination": "https://www.tectrix.dev/blog",
+      "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "about.tectrix.dev"
+        }
+      ],
+      "destination": "https://www.tectrix.dev/about",
+      "permanent": true
     }
   ]
 }

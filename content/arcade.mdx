@@ -1,0 +1,35 @@
+---
+title: "Making an arcade machine"
+sub: "The making of and how to make your own"
+author: "Joran Hennion"
+keywords: "arcade, arcade machine, arcade makecode"
+image: "arcade.png"
+date: "2025-4-25"
+---
+
+import Image from "next/image";
+import Arcade from "../public/blog/arcade.png";
+
+<Image src={Arcade} alt="The arcade machine" quality={100} placeholder="blur" />
+___
+# This article is not complete
+Before I start off with this article, I want you to know that this article isn't complete. This is because we have used some weird configurations and hardware that isn't for sale like the monitor which is just an old 4:3 display laying around. We are planning to make a second one which would be better and more simple and universal for people to put together. This will allow me to make an easier and more accurate tutorial.
+
+# 1. Introduction
+
+## Background
+This is a project I've been working on for a local initiative called [CoderDojo](https://coderdojobelgium.be) this is an organisation that manages the individual "dojo's" that are held up by locals volunteering. The goal of coderdojo is to make programming more accessible to kids in a way that lets them do anything they want without having to follow something like a course. Instead of courses, coderdojo relies on the volunteers, the coaches. They help the kids with problems they may encounter or guide younger kids through the process of making a game for example. As you can see on the photo, the kids also had some fun with the coderdojo stickers. At the end of the session, the kids get to optionally show off their projects at the show & tell.
+
+The arcade machine project got started when we were introducing the kids to [arcade makecode](https://arcade.makecode.com) which allows you to make retro games easily with blocks like [Scratch](https://scratch.mit.edu). Arcade makecode also allows you to compile your project for certain hardware, they also listed a possibility of a DIY project which of course is an arcade machine. You can find this article [here](https://arcade.makecode.com/hardware/raspberry-pi/wooden-cabinet).
+
+## Software
+We were planning to use a raspberry Pi as suggested by microsoft's documentation. But we quickly encountered our first problem, the official software only supports Pi zero which we didn't have and also wasn't that powerful. We decided to use a raspberry Pi 3B which we had laying around. For the software, we thought of using the kiosk website microsoft provided but that was quite slow and also needed a network connection at all times. We eventually found out that you can compile the projects to raw elf binaries for ARM and raspberry Pi. We tried running them but they only functioned half and the keyboard support wasn't really working. We then found [McAirpos](https://vegz78.github.io/McAirpos/) which works around these issues and allows these binaries to run within RetroPie to allow for a clean UI and a selection menu for individual games / elf files. We proceeded to bind our gpio buttons to the keyboard which allowed us to control our system and our games with the joysticks and buttons.
+
+## hardware
+The full wooden encasing is made by me in [Onshape](https://onshape.com) using the laser joints plugin / featureScript. After making this model, I proceeded to use the auto layout featureScript and using the drawing tool from onshape to make our 3d panels into an 2d svg which we could send straight to the lasercutter. For the wood, we used 12mm MDF wood which we later regret as it's really overkill. I suggest you use 6-9mm depending on your situation but you can always use 12mm, it doesn't really have downsides besides weight and the time it takes to cut using a lasercutter. For the monitor, we "stripped" (removed the plastic shell) from an old 4:3 display and mounted it in the inside using screws and wooden panels to hold it together. The buttons and controls we found on a website selling retro controls. These seem to be pretty standard and you can find them from a local retro business. Just make sure they just use wires to communicate, not some proprietary port. The speakers are just some unbranded 3.5mm speakers that use USB for power. Everything seemed to work out of the box. We also used a (fused) connector on the back for power, this is just a standard 3-pin 230V connector like you can find in your power supply. We wired this to a power strip inside for providing power to the raspberry Pi, and the monitor. We had to eventually glue the wooden panels together because they loosened over time, this isn't required at all because the wood provides enough friction from the joints to hold it together but we had to transport it a lot so for us it was a requirement. We also made a hole in the bottom for quick acces and airflow (although the raspberry Pi doesn't even need a fan).
+
+## uploading projects
+Uploading projects can be done manually through sftp. This wasn't great but it worked, until we were thinking of using an usb stick which files will be automatically transfered from using retropie. This wasn't really working at first and required an USB port on the outside so I thought of something else. I wanted to automate the compiling in some way. The current method is appending ?nolocalhost=1&compile=rawELF&hw=rpi#editor to the editor url and compiling your project there which will make your elf binary. This couldn't be automated though so that wasn't good enough for me. I started searching further and found a node package named makecode, this allowed me to compile straight to elf files. So I got to work making a simple website which lets you add your project to the arcade machine automatically, it works by making an api endpoint for the latest added project and a bash script with a cronjob picks that up and compiles it.
+
+# 2. Tutorial
+this it the part that's incomplete. you can watch my [repo](https://github.com/tectrixdev/www) to get notified for changes.
