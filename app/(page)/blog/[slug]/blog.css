@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 a {
-  @apply underline text-blue-700 font-semibold rounded-md hover:text-white transition-colors duration-300;
+  @apply underline text-white font-semibold rounded-md hover:font-bold transition-colors duration-300;
 }
 
 p {
