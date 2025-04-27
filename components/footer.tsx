@@ -9,8 +9,8 @@ const Footer: React.FC = () => {
       title="License (info)"
       draggable={false}
     >
-      <footer className="w-full bg-black p-4 text-center font-bold text-white">
-        <p>
+      <footer className="w-full bg-black p-4 font-bold text-white">
+        <p className="text-center">
           &copy; {new Date().getFullYear()} Joran Hennion. All rights reserved.
         </p>
       </footer>
