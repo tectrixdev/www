@@ -7,7 +7,7 @@ a {
 }
 
 p {
-  @apply lg:text-lg my-2;
+  @apply lg:text-lg my-2 text-justify;
 }
 
 hr {
