@@ -26,5 +26,6 @@ TODO:
 
 - extra:
 - [x] fix all metadata
+- [ ] add structured data
 - [ ] fix blog posts unneeded code
 - [ ] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results
