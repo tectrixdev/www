@@ -1,5 +1,8 @@
 name: Screenshot
-on: push
+on:
+  push:
+      paths:
+        - 'readme.md'
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
