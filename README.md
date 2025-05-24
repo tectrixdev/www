@@ -1,6 +1,6 @@
 # My website
 
-## [tectrix.dev](https://www.tectrix.dev)
+[![pagespeed](https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/metrics.plugin.pagespeed.svg)](https://www.tectrix.dev)
 
 V.0.1.6 - SEO update
 
