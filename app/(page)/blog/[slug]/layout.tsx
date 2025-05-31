@@ -12,6 +12,7 @@ import Tagsub from "@/components/tagsub";
 import Divider from "@/components/divider";
 import PostInfo from "@/components/postinfo";
 import Navbar from "@/components/navbar";
+import Link from "next/link";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
 
@@ -82,7 +83,17 @@ export default async function RootLayout({
           />
           <Divider />
           <PostInfo author={metadata.author} date={metadata.date} />
-          <Content>{children}</Content>
+          <Content>
+            {children}
+            <Divider />
+            <p>
+              None of the content in this article is created by AI. This is all
+              handwritten by me. If you find any mistakes or spelling errors,
+              you may make a pull request on{" "}
+              <Link href="https://www.github.com/tectrixdev/www">GitHub</Link>{" "}
+              or send me an email.
+            </p>
+          </Content>
         </MotionConfig>
         <Analytics />
         <SpeedInsights />

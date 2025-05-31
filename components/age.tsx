@@ -14,7 +14,7 @@ export default function Age() {
   }, []);
 
   function calculateAge() {
-    return ((Math.floor(Date.now() / 1000) - 1255298400) / 31556926).toFixed(7); // don't ask why
+    return ((Math.floor(Date.now() / 1000) - 1255318860) / 31556926).toFixed(7); // accuracy: minute
   }
   return age;
 }

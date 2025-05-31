@@ -1,5 +1,5 @@
 import Card from "@/components/card";
-import Content from "@/components/content";
+import Content from "@/components/blog_content";
 import Tagline from "@/components/tagline";
 import Divider from "@/components/divider";
 import React from "react";

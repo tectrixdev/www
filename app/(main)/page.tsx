@@ -47,11 +47,19 @@ export default function Home() {
           />
           <Card
             title="ADHDO"
-            description="a todo app for people with ADHD (unfinished)"
+            description="A todo app for people with ADHD. (unfinished, currently being remade)"
             imageUrl="adhdo.png"
             projectUrl="https://github.com/tectrixdev/ADHDO"
             button="view source"
             color={-190}
+          />
+          <Card
+            title="Unplayit"
+            description="A project aiming to fix annoying third party ip's from minecraft servers hosted on aternos, with playit, and others. Currently only supports playit hosted servers."
+            imageUrl="unplayit.png"
+            projectUrl="https://github.com/tectrixdev/unplayit"
+            button="view source"
+            color={190}
           />
         </CardWrapper>
         {/*<Subtitle title="Design" />*/}
@@ -66,11 +74,11 @@ export default function Home() {
             color={130}
           />
           <Card
-            title="Arcade uploader"
-            description="A fairly new project which aims to make coding for arcade machines very easy for kids, more info will release soon as I'm working on it!"
-            imageUrl="arcade.png"
-            projectUrl="https://github.com/tectrixdev/arcade_upload"
-            button="view source"
+            title="Arcade machine"
+            description="An arcade machine I made that allows kids to program their own retro games for it using microsoft's arcade makecode"
+            imageUrl="blog/arcade.png"
+            projectUrl="https://arcade.tectrix.dev/"
+            button="view documentation and guide"
             color={-130}
           />
         </CardWrapper>
