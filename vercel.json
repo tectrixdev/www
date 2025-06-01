@@ -38,7 +38,9 @@
       ],
       "destination": "https://www.tectrix.dev/about",
       "permanent": true
-    },
+    }
+  ],
+  "rewrites": [
     {
       "source": "/:path*",
       "has": [
@@ -47,8 +49,7 @@
           "value": "glow.tectrix.dev"
         }
       ],
-      "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx",
-      "permanent": true
+      "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx"
     }
   ]
 }
