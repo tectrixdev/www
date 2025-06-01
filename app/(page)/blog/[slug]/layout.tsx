@@ -93,6 +93,10 @@ export default async function RootLayout({
               <Link href="https://www.github.com/tectrixdev/www">GitHub</Link>{" "}
               or send me an email.
             </p>
+            <Divider />
+            <pre>{`glow https://glow.tectrix.dev/${slug}`}</pre>
+            {/* <pre>{`curl https://glow.tectrix.dev/${slug} -s | glow --tui`}</pre> //just use wget here because it's most widely preinstalled, although it's not on termux but that doesn't matter I guess, it let's you use it without appending https which is a win I guess.... */}
+            <pre>{`wget glow.tectrix.dev/${slug} -q -O - | glow --tui`}</pre>
           </Content>
         </MotionConfig>
         <Analytics />
