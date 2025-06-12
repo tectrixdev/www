@@ -38,6 +38,16 @@
       ],
       "destination": "https://www.tectrix.dev/about",
       "permanent": true
+    },
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "status.minecraft.tectrix.dev"
+        }
+      ],
+      "destination": "http://46.202.82.167:1038/status/mc"
     }
   ],
   "rewrites": [
@@ -50,16 +60,6 @@
         }
       ],
       "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx"
-    },
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "status.minecraft.tectrix.dev"
-        }
-      ],
-      "destination": "http://46.202.82.167:1038/status/mc"
     }
   ]
 }
