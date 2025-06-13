@@ -38,12 +38,12 @@ h6 {
   @apply my-5 text-center text-lg font-bold md:text-xl;
 }
 
-pre {
+pre:has(code) {
   @apply my-5 w-full overflow-x-scroll rounded-md border-2 border-gray-400 bg-black/60 p-5 font-bold backdrop-blur-lg;
 }
 
 code {
-  @apply m-1 rounded-md bg-gray-900 p-0.5 font-mono;
+  @apply m-1 rounded-md font-mono;
 }
 
 blockquote {
