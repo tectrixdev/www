@@ -39,7 +39,7 @@ export default function Home() {
         <CardWrapper>
           <Card
             title="My portfolio"
-            description="You are right here ;)"
+            description="You are right here ;)."
             imageUrl="this.webp"
             projectUrl="https://github.com/tectrixdev/www"
             button="view source"
@@ -67,7 +67,7 @@ export default function Home() {
         <CardWrapper>
           <Card
             title="TectrixMC"
-            description="I manage this server which runs on ubuntu server 24.04, website by ilxplay"
+            description="I manage this server which runs on ubuntu server 24.04, website by ilxplay."
             imageUrl="tectrixmc.png"
             projectUrl="https://minecraft.tectrix.dev/"
             button="Join us!"
@@ -75,11 +75,19 @@ export default function Home() {
           />
           <Card
             title="Arcade machine"
-            description="An arcade machine I made that allows kids to program their own retro games for it using microsoft's arcade makecode"
+            description="An arcade machine I made that allows kids to program their own retro games for it using microsoft's arcade makecode."
             imageUrl="blog/arcade.png"
             projectUrl="https://arcade.tectrix.dev/"
             button="view documentation and guide"
             color={-130}
+          />
+          <Card
+            title="Tectrix status"
+            description="An automatic status checker of my services using uptimekuma hosted on embotic.xyz(I work for them, not sponsored)."
+            imageUrl="status.png"
+            projectUrl="https://status.tectrix.dev/"
+            button="view status page"
+            color={-150}
           />
         </CardWrapper>
       </Content>
