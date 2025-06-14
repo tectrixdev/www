@@ -2,7 +2,7 @@
 
 [![pagespeed](https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/metrics.plugin.pagespeed.svg)](https://www.tectrix.dev)
 
-V.0.1.7 - pagespeed widget
+V.0.2.0 - Image loading update
 
 TODO:
 
