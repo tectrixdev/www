@@ -13,10 +13,7 @@ const main = Rubik_Mono_One({
 });
 
 const PictureGallery = () => {
-  const images = Array.from(
-    { length: 18 },
-    (_, i) => `/Pictures/${i + 1}.webp`,
-  );
+  const images = Array.from({ length: 18 }, (_, i) => `/Pictures/${i + 1}.jpg`);
 
   return (
     <div className="flex flex-col items-center">
@@ -70,8 +67,8 @@ const PictureGallery = () => {
                   <Image
                     src={src}
                     alt={`Picture ${index + 1}`}
-                    width={400}
-                    height={400}
+                    width={288} /* size on my display * 2 */
+                    height={288} /* size on my display * 2 */
                     className="size-20 cursor-pointer object-cover transition-transform duration-500 ease-in-out hover:scale-150 md:size-36"
                     tabIndex={0}
                   />
@@ -98,13 +95,13 @@ const PictureGallery = () => {
                   id="popup"
                 >
                   <Image
-                    src={`/Pictures/${i}.webp`}
+                    src={`/Pictures/${i}.jpg`}
                     alt={`Picture ${i}`}
-                    width={3000}
-                    height={3000}
+                    width={1000} /* size on my display */
+                    height={1000} /* size on my display */
                     className="h-fit w-[300px] object-contain md:h-[500px] md:w-fit lg:h-[700px]"
                     tabIndex={0}
-                    quality={75}
+                    quality={85}
                   />
                 </div>
                 <button
