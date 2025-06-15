@@ -30,6 +30,12 @@
     },
     {
       "source": "/",
+      "has": [{ "type": "host", "value": "wakapi.tectrix.dev" }],
+      "destination": "https://wakapi.tectrix.dev/#",
+      "permanent": true
+    },
+    {
+      "source": "/",
       "has": [
         {
           "type": "host",
