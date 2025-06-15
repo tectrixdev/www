@@ -30,12 +30,6 @@
     },
     {
       "source": "/",
-      "has": [{ "type": "host", "value": "wakapi.tectrix.dev" }],
-      "destination": "https://wakapi.tectrix.dev/home",
-      "permanent": true
-    },
-    {
-      "source": "/",
       "has": [
         {
           "type": "host",
@@ -56,16 +50,6 @@
         }
       ],
       "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "wakapi.tectrix.dev"
-        }
-      ],
-      "destination": "https://frank-mink-incredibly.ngrok-free.app/:path*"
     }
   ]
 }
