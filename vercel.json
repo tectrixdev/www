@@ -60,16 +60,6 @@
         }
       ],
       "destination": "https://fox-alive-sheepdog.ngrok-free.app"
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "wakapi.tectrix.dev"
-        }
-      ],
-      "destination": "https://fox-alive-sheepdog.ngrok-free.app/:path"
     }
   ]
 }
