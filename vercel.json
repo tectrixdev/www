@@ -52,14 +52,14 @@
       "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx"
     },
     {
-      "source": "/",
+      "source": "/:path",
       "has": [
         {
           "type": "host",
           "value": "wakapi.tectrix.dev"
         }
       ],
-      "destination": "https://fox-alive-sheepdog.ngrok-free.app"
+      "destination": "https://fox-alive-sheepdog.ngrok-free.app/:path"
     }
   ]
 }
