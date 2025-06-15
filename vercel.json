@@ -62,7 +62,7 @@
       "destination": "https://fox-alive-sheepdog.ngrok-free.app/:path"
     },
     {
-      "source": "/*",
+      "source": "/",
       "has": [
         {
           "type": "host",
