@@ -94,8 +94,12 @@ export default async function RootLayout({
               or send me an email.
             </p>
             <Divider />
-            <pre className="select-all">{`glow https://glow.tectrix.dev/${slug}`}</pre>
-            <pre className="select-all">{`wget glow.tectrix.dev/${slug} -q -O - | glow --tui`}</pre>
+            <pre className="select-all">
+              <code>{`glow https://glow.tectrix.dev/${slug}`}</code>
+            </pre>
+            <pre className="select-all">
+              <code>{`wget glow.tectrix.dev/${slug} -q -O - | glow --tui`}</code>
+            </pre>
           </Content>
         </MotionConfig>
         <Analytics />
