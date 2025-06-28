@@ -29,3 +29,4 @@ TODO:
 - [ ] add structured data
 - [ ] fix blog posts unneeded code
 - [x] fix performance - add uncompressed images for the gallery and let nextjs do the work for better results - also fixed sizes
+- [ ] fix blog breakpoints for ~~fucks~~ sake
