@@ -52,7 +52,7 @@
       "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx"
     },
     {
-      "source": "/*",
+      "source": "/",
       "has": [
         {
           "type": "host",
