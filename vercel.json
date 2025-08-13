@@ -50,6 +50,16 @@
         }
       ],
       "destination": "https://raw.githubusercontent.com/tectrixdev/www/refs/heads/main/content/:path*.mdx"
+    },
+    {
+      "source": "/*",
+      "has": [
+        {
+          "type": "host",
+          "value": "embotic.tectrix.dev"
+        }
+      ],
+      "destination": "https://dash.embotic.xyz/register?ref=Imy7ELuD"
     }
   ]
 }
