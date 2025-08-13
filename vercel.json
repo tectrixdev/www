@@ -40,11 +40,11 @@
       "permanent": true
     },
     {
-      "source": "/",
+      "source": "/embotic",
       "has": [
         {
           "type": "host",
-          "value": "embotic.tectrix.dev"
+          "value": "links.tectrix.dev"
         }
       ],
       "destination": "https://dash.embotic.xyz/register?ref=Imy7ELuD",
