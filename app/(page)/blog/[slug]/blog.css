@@ -15,27 +15,27 @@ hr {
 }
 
 h1 {
-  @apply my-5 text-center text-5xl font-bold md:text-6xl;
+  @apply mb-1 mt-5 text-5xl font-bold md:text-6xl;
 }
 
 h2 {
-  @apply my-5 text-center text-4xl font-bold md:text-5xl;
+  @apply mb-1 mt-5 text-4xl font-bold md:text-5xl;
 }
 
 h3 {
-  @apply my-5 text-center text-3xl font-bold md:text-4xl;
+  @apply mb-1 mt-5 text-3xl font-bold md:text-4xl;
 }
 
 h4 {
-  @apply my-5 text-center text-2xl font-bold md:text-3xl;
+  @apply mb-1 mt-5 text-2xl font-bold md:text-3xl;
 }
 
 h5 {
-  @apply my-5 text-center text-xl font-bold md:text-2xl;
+  @apply mb-1 mt-5 text-xl font-bold md:text-2xl;
 }
 
 h6 {
-  @apply my-5 text-center text-lg font-bold md:text-xl;
+  @apply mb-1 mt-5 text-lg font-bold md:text-xl;
 }
 
 pre:has(code) {
@@ -48,10 +48,6 @@ code {
 
 blockquote {
   @apply my-5 border-l-4 border-gray-700 bg-gray-900/50 p-5 font-bold;
-}
-
-.language-bash {
-  @apply font-bold text-green-400;
 }
 
 li {

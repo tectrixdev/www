@@ -52,7 +52,7 @@ const BlogPage: React.FC = () => {
       <Content>
         <div
           id="cards"
-          className="mx-auto flex flex-col justify-center gap-10 lg:grid lg:grid-cols-2"
+          className="mx-auto flex flex-col justify-center gap-10 lg:grid lg:grid-cols-3"
         >
           {blogPosts.map((post) => (
             <Card

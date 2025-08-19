@@ -91,7 +91,11 @@ export default async function RootLayout({
               handwritten by me. If you find any mistakes or spelling errors,
               you may make a pull request on{" "}
               <Link href="https://www.github.com/tectrixdev/www">GitHub</Link>{" "}
-              or send me an email.
+              or{" "}
+              <Link href="mailto:blog.mistakes@tectrix.dev">
+                send me an email
+              </Link>
+              .
             </p>
             <Divider />
             <pre className="select-all">

@@ -1,0 +1,147 @@
+---
+title: "How to make the Lenovo Ideapad slim 5 AKP10 83HX work well with Fedora."
+sub: "And possibly similar Ideapads too!"
+author: "Joran Hennion"
+keywords: "RTL8922AE, Wi-Fi issues ideapad, no mic input ideapad, mic only on pro audio, bluetooth disconnecting ideapad, linux, bad Wi-Fi RTL8922AE linux, bad Wi-Fi ideapad linux, fedora ideapad bad Wi-Fi signal, fedora ideapad no mic input"
+image: "laptop.png"
+date: "2025-4-25"
+---
+import Image from "next/image"
+import Laptop from "../public/blog/laptop.png"
+
+First of all, excuse the bad markdown parsing. I'm working on it. You may use glow to read this ;).
+____
+# Introduction
+I bought my Ideapad slim 5 14AKP10 83HX without OS because I of course wanted fedora KDE on it. Since using it as a daily driver for about 3 months now I've noticed some things that are minor annoyances but made my experience a bit worse. I recently found a solution to both of them which I had found before but skipped because they looked like they might not work. This is why I'm making this. So you can have a guide and know it will work for you.
+
+<Image src={Laptop} placeholder="blur" alt="My laptop." quality={100}/>
+_Lenovo Ideapad slim 5 14AKP10 83HX_ - Note that this may apply to many Ideapads.
+
+# The issues I had.
+
+Bad Wi-Fi, disconnections over Wi-Fi. Bluetooth cutting of for half a second every now and then, Really bad cutoffs on some games. Some earbuds disconnected a lot too. Abnormal internal microphone/speakers profiles and non working microphone on default profile, only on pro audio which disabled the speakers. If you're having any of these on a similar Ideapad, This guide will propably help you too.
+
+# Issues index.
+
+**General:**
+- Slow or unreliable Wi-Fi with bad ping and packet loss.
+
+**Ideapad specific:**
+- Dual mic/speaker usage (Fixing audio profiles and microphone input.).
+
+**(Realtek) Wireless card specific:**
+- Wi-Fi driver not working correctly and interrupting bluetooth. (RTL8922AE)
+
+
+If there is anything else you have an issue with on linux with an ideapad (similar to mine), [please send me an email.](mailto:ideapad.issues@tectrix.dev) I'll definitely to look into it.
+
+# Slow or unreliable Wi-Fi with bad ping and packet loss. (general issue)
+[Source](https://unix.stackexchange.com/questions/269661/how-to-turn-off-wireless-power-management-permanently#315400)
+
+Disable Wi-Fi powersave:
+```bash
+sudo nano /etc/NetworkManager/conf.d/default-Wi-Fi-powersave-on.conf
+```
+
+Change your file to this:
+```bash
+[connection]
+Wi-Fi.powersave = 2
+```
+(reboot)
+
+You can confirm with:
+```zsh
+[19:17:29] [~] ❱❱❱ iw wlo1 get power_save
+Power save: on
+```
+_(Wi-Fi does need to be enabled, your wireless card name can also be different.)_
+
+# Audio issues / abnormal sound profiles.
+
+This seems to be a fedora-only issue, but if you have these problems or similar this might still help:
+- Having only "Hi-Fi audio" and "pro audio" as profiles for your speakers.
+- Microphone only works on pro audio but speakers only work on the other profile.
+- No audio at all both input/output.
+
+So now, the solution:
+[Source](https://discussion.fedoraproject.org/t/fix-internal-laptop-microphone/126155/15)
+
+Install alsa firmware(might not be needed): 
+```bash
+sudo dnf install alsa-firmware
+```
+
+Blacklist snd_soc_dmic:
+```bash
+sudo nano /etc/modprobe.d/blacklist-snd_soc_dmic.conf
+```
+Add:
+```bash
+blacklist snd_soc_dmic
+```
+
+Reload the kernel:
+```bash
+sudo dracut -f
+```
+
+Don't forget to reboot!
+
+Now you should have profiles like this:
+- Analog Stereo Duplex
+- Analog Stereo Output
+- Analog Stereo Input
+- Pro audio
+
+# Realtek driver issues.
+
+Although this fix might not directly affect Bluetooth, it does fix it. It seems like the Wi-Fi issue causes disruption in Bluetooth. For example, Bluetooth was cutting of whenever I opened the networks quick menu on KDE. All of my issues with Wi-Fi and Bluetooth were fixed by this.
+
+It seems like this new driver should be merged in kernel version 6.16 or 6.17.
+So if you're on 6.15.9 like fedora 42 at the time of writing, you should install the driver.
+**I do not recommend installing the driver if you're on kernel 6.17+ and have none of the described issues.**
+
+### The solution:
+[Source](https://github.com/lwfinger/rtw89/issues/386)
+
+[Driver](https://github.com/morrownr/rtw89)
+
+Start off by cloning the repository, please don't be as stupid as me and clone it into Documents for example. Otherwise your home folder will be full of git repos.
+```
+git clone https://github.com/morrownr/rtw89
+```
+Of course cd into the cloned repo:
+```
+cd rtw89
+```
+Install prerequisites:
+```
+sudo dnf install git make gcc kernel-headers mokutil dkms -y
+```
+Remove previously installed conflicting drivers:
+```
+sudo make cleanup_target_system
+```
+Install the driver via dkms:
+```
+sudo dkms install $PWD
+```
+Build and install the firmware:
+```
+sudo make install_fw
+```
+Blacklist the in-kernel driver:
+```
+sudo cp -v rtw89.conf /etc/modprobe.d/
+```
+(If you don't have secure boot enabled, reboot now.)
+
+### EXTRA: secure boot.
+```
+sudo mokutil --import /var/lib/dkms/mok.pub
+```
+Type in your password, for example "dkms" (doesn't really matter, just remember it.). Now reboot. You will be prompted the password on boot. When mokutil comes up, just select "Enroll MOK" --> "continue" --> "Yes" --> Type your password. --> "Reboot".
+
+# Outro.
+This should be it! As far as the issues go that I've experienced, this seems to fix the major ones that really annoyed me. If you have any more issues with these kinds of laptops, [send me a message](mailto:ideapad.issues@tectrix.dev) and I'll take a look at it! I hope this helped you and that's about it. 
