@@ -3,20 +3,20 @@
 @tailwind utilities;
 
 @supports (scrollbar-color: auto) {
-  :root {
-    scrollbar-color: white #111615;
-    scrollbar-width: thin;
-  }
+	:root {
+		scrollbar-color: white #111615;
+		scrollbar-width: thin;
+	}
 }
 
 /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
 @supports selector(::-webkit-scrollbar) {
-  ::-webkit-scrollbar {
-    background: #111615;
-    width:0.5rem;
-  }
+	::-webkit-scrollbar {
+		background: #111615;
+		width: 0.5rem;
+	}
 
-  ::-webkit-scrollbar-thumb {
-    background: white;
-  }
+	::-webkit-scrollbar-thumb {
+		background: white;
+	}
 }

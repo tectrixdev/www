@@ -3,76 +3,76 @@
 @tailwind utilities;
 
 a {
-  @apply rounded-md font-semibold text-white underline transition-colors duration-300 hover:font-bold;
+	@apply rounded-md font-semibold text-white underline transition-colors duration-300 hover:font-bold;
 }
 
 p {
-  @apply my-2 text-pretty text-justify lg:text-lg;
+	@apply my-2 text-pretty text-justify lg:text-lg;
 }
 
 hr {
-  @apply mx-auto my-5 h-0.5 w-[60vw] self-center bg-white opacity-65 shadow-lg backdrop-blur-lg lg:h-1;
+	@apply mx-auto my-5 h-0.5 w-[60vw] self-center bg-white opacity-65 shadow-lg backdrop-blur-lg lg:h-1;
 }
 
 h1 {
-  @apply mb-1 mt-5 text-5xl font-bold md:text-6xl;
+	@apply mb-1 mt-5 text-5xl font-bold md:text-6xl;
 }
 
 h2 {
-  @apply mb-1 mt-5 text-4xl font-bold md:text-5xl;
+	@apply mb-1 mt-5 text-4xl font-bold md:text-5xl;
 }
 
 h3 {
-  @apply mb-1 mt-5 text-3xl font-bold md:text-4xl;
+	@apply mb-1 mt-5 text-3xl font-bold md:text-4xl;
 }
 
 h4 {
-  @apply mb-1 mt-5 text-2xl font-bold md:text-3xl;
+	@apply mb-1 mt-5 text-2xl font-bold md:text-3xl;
 }
 
 h5 {
-  @apply mb-1 mt-5 text-xl font-bold md:text-2xl;
+	@apply mb-1 mt-5 text-xl font-bold md:text-2xl;
 }
 
 h6 {
-  @apply mb-1 mt-5 text-lg font-bold md:text-xl;
+	@apply mb-1 mt-5 text-lg font-bold md:text-xl;
 }
 
 pre:has(code) {
-  @apply my-5 w-full overflow-x-scroll rounded-md border-2 border-gray-400 bg-black/60 p-5 font-bold backdrop-blur-lg selection:bg-white/25;
+	@apply my-5 w-full overflow-x-scroll rounded-md border-2 border-gray-400 bg-black/60 p-5 font-bold backdrop-blur-lg selection:bg-white/25;
 }
 
 code {
-  @apply m-1 rounded-md font-mono;
+	@apply m-1 rounded-md font-mono;
 }
 
 blockquote {
-  @apply my-5 border-l-4 border-gray-700 bg-gray-900/50 p-5 font-bold;
+	@apply my-5 border-l-4 border-gray-700 bg-gray-900/50 p-5 font-bold;
 }
 
 li {
-  @apply my-1 ml-4 list-disc;
+	@apply my-1 ml-4 list-disc;
 }
 
 img {
-  @apply mx-auto w-full rounded-lg md:w-4/5 lg:w-3/5;
+	@apply mx-auto w-full rounded-lg md:w-4/5 lg:w-3/5;
 }
 
 @supports (scrollbar-color: auto) {
-  :root {
-    scrollbar-color: white #111615;
-    scrollbar-width: thin;
-  }
+	:root {
+		scrollbar-color: white #111615;
+		scrollbar-width: thin;
+	}
 }
 
 /* Otherwise, use `::-webkit-scrollbar-*` pseudo-elements */
 @supports selector(::-webkit-scrollbar) {
-  ::-webkit-scrollbar {
-    background: #111615;
-    width: 0.5rem;
-  }
+	::-webkit-scrollbar {
+		background: #111615;
+		width: 0.5rem;
+	}
 
-  ::-webkit-scrollbar-thumb {
-    background: white;
-  }
+	::-webkit-scrollbar-thumb {
+		background: white;
+	}
 }

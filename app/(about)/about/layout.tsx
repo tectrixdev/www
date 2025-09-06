@@ -14,80 +14,80 @@ import Content from "@/components/blog_content";
 import type { Viewport } from "next";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "About - tectrix.dev",
-  description: "Joran Hennion",
-  generator: "Next.js",
-  applicationName: "tectrix.dev",
-  keywords: [
-    "Joran Hennion",
-    "jojommeke",
-    "tectrix",
-    "TecTrix",
-    "tectrix.dev",
-    "Joran",
-    "Hennion",
-    "web development",
-    "frontend developer",
-    "portfolio",
-    "creative projects",
-    "Next.js projects",
-    "React developer",
-  ],
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://www.tectrix.dev/about",
-  },
-  authors: [{ name: "Joran Hennion" }],
-  creator: "Joran Hennion",
-  publisher: "Joran Hennion",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://www.tectrix.dev"),
+	title: "About - tectrix.dev",
+	description: "Joran Hennion",
+	generator: "Next.js",
+	applicationName: "tectrix.dev",
+	keywords: [
+		"Joran Hennion",
+		"jojommeke",
+		"tectrix",
+		"TecTrix",
+		"tectrix.dev",
+		"Joran",
+		"Hennion",
+		"web development",
+		"frontend developer",
+		"portfolio",
+		"creative projects",
+		"Next.js projects",
+		"React developer",
+	],
+	robots: "index, follow",
+	alternates: {
+		canonical: "https://www.tectrix.dev/about",
+	},
+	authors: [{ name: "Joran Hennion" }],
+	creator: "Joran Hennion",
+	publisher: "Joran Hennion",
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	metadataBase: new URL("https://www.tectrix.dev"),
 };
 
 export const viewport: Viewport = {
-  colorScheme: "dark",
+	colorScheme: "dark",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en " className="overflow-x-hidden">
-      <head></head>
-      <Scrollbody className="backdrop-blur-lg">
-        <MotionConfig reducedMotion="user">
-          <main>
-            <Tagline line="About me" />
-            <Navbar
-              items={[
-                { url: "/", label: "home" },
-                { url: "/blog", label: "blog" },
-              ]}
-            />
-            <Content>{children}</Content>
-          </main>
-        </MotionConfig>
-        <Analytics />
-        <SpeedInsights />
-        <FooterShadow />
-        <Footer />
-      </Scrollbody>
-    </html>
-  );
+	return (
+		<html lang="en " className="overflow-x-hidden">
+			<head></head>
+			<Scrollbody className="backdrop-blur-lg">
+				<MotionConfig reducedMotion="user">
+					<main>
+						<Tagline line="About me" />
+						<Navbar
+							items={[
+								{ url: "/", label: "home" },
+								{ url: "/blog", label: "blog" },
+							]}
+						/>
+						<Content>{children}</Content>
+					</main>
+				</MotionConfig>
+				<Analytics />
+				<SpeedInsights />
+				<FooterShadow />
+				<Footer />
+			</Scrollbody>
+		</html>
+	);
 }

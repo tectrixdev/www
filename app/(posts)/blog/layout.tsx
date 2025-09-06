@@ -10,74 +10,74 @@ import { MotionConfig } from "motion/react";
 import type { Viewport } from "next";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+	variable: "--font-geist-sans",
+	subsets: ["latin"],
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+	variable: "--font-geist-mono",
+	subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Blog Posts - tectrix.dev",
-  description: "blog posts on tectrix.dev | Joran Hennion's blog",
-  generator: "Next.js",
-  applicationName: "Blog - tectrix.dev",
-  keywords: [
-    "Joran Hennion",
-    "jojommeke",
-    "tectrix",
-    "TecTrix",
-    "tectrix.dev",
-    "Joran",
-    "Hennion",
-    "web development",
-    "frontend developer",
-    "portfolio",
-    "creative projects",
-    "Next.js projects",
-    "React developer",
-  ],
-  robots: "index, follow",
-  alternates: {
-    canonical: "https://www.tectrix.dev/blog",
-  },
-  authors: [{ name: "Joran Hennion" }],
-  creator: "Joran Hennion",
-  publisher: "Joran Hennion",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
-  metadataBase: new URL("https://www.tectrix.dev"),
+	title: "Blog Posts - tectrix.dev",
+	description: "blog posts on tectrix.dev | Joran Hennion's blog",
+	generator: "Next.js",
+	applicationName: "Blog - tectrix.dev",
+	keywords: [
+		"Joran Hennion",
+		"jojommeke",
+		"tectrix",
+		"TecTrix",
+		"tectrix.dev",
+		"Joran",
+		"Hennion",
+		"web development",
+		"frontend developer",
+		"portfolio",
+		"creative projects",
+		"Next.js projects",
+		"React developer",
+	],
+	robots: "index, follow",
+	alternates: {
+		canonical: "https://www.tectrix.dev/blog",
+	},
+	authors: [{ name: "Joran Hennion" }],
+	creator: "Joran Hennion",
+	publisher: "Joran Hennion",
+	formatDetection: {
+		email: false,
+		address: false,
+		telephone: false,
+	},
+	metadataBase: new URL("https://www.tectrix.dev"),
 };
 
 export const viewport: Viewport = {
-  colorScheme: "dark",
+	colorScheme: "dark",
 };
 
 export default function RootLayout({
-  children,
+	children,
 }: Readonly<{
-  children: React.ReactNode;
+	children: React.ReactNode;
 }>) {
-  return (
-    <html lang="en " className="overflow-x-hidden">
-      <head>
-        <meta name="darkreader-lock" />
-        <meta name="robots" content="index, follow" />
-        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
-        <meta name="language" content="English" />
-      </head>
-      <Scrollbody>
-        <MotionConfig reducedMotion="user">{children}</MotionConfig>
-        <Analytics />
-        <SpeedInsights />
-        <FooterShadow />
-        <Footer />
-      </Scrollbody>
-    </html>
-  );
+	return (
+		<html lang="en " className="overflow-x-hidden">
+			<head>
+				<meta name="darkreader-lock" />
+				<meta name="robots" content="index, follow" />
+				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+				<meta name="language" content="English" />
+			</head>
+			<Scrollbody>
+				<MotionConfig reducedMotion="user">{children}</MotionConfig>
+				<Analytics />
+				<SpeedInsights />
+				<FooterShadow />
+				<Footer />
+			</Scrollbody>
+		</html>
+	);
 }

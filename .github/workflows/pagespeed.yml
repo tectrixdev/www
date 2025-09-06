@@ -1,8 +1,8 @@
 name: Screenshot
 on:
   push:
-      paths:
-        - 'README.md'
+    paths:
+      - "README.md"
 jobs:
   github-metrics:
     runs-on: ubuntu-latest

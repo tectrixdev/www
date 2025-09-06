@@ -2,17 +2,17 @@ import Posts from "./postlist";
 import "./blog.css";
 
 export default async function Page({
-  params,
+	params,
 }: {
-  params: Promise<{ slug: string }>;
+	params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params;
-  const { default: Post } = await import(`@/content/${slug}.mdx`);
-  return <Post />;
+	const { slug } = await params;
+	const { default: Post } = await import(`@/content/${slug}.mdx`);
+	return <Post />;
 }
 
 export function generateStaticParams() {
-  return Posts;
+	return Posts;
 }
 
 export const dynamicParams = false;
