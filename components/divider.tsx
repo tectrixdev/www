@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 export default function Divider() {
 	return (
 		<motion.div
+			viewport={{ margin: "100px 100px 100px 100px" }}
 			initial={{ opacity: 0, scale: 0.5 }}
 			whileInView={{ opacity: 1, scale: 1 }}
 			transition={{ duration: 1, type: "spring" }}

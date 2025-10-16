@@ -13,6 +13,7 @@ interface NavbarProps {
 const Navbar: React.FC<NavbarProps> = ({ items }) => {
 	return (
 		<motion.nav
+			viewport={{ margin: "100px 100px 100px 100px" }}
 			initial={{
 				opacity: 0,
 				y: 100,

@@ -18,6 +18,7 @@ const Subtitle: React.FC<Props> = ({ title }) => {
 	return (
 		<div>
 			<motion.h3
+				viewport={{ margin: "100px 100px 100px 100px" }}
 				className={`${main.className} mt-14 snap-y text-center text-4xl text-white`}
 				id={`Sub.${title}`}
 				initial={{

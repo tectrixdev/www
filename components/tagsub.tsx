@@ -25,6 +25,7 @@ const Tagsub: React.FC<Props> = ({ sub }) => {
 			initial={{ opacity: 0, y: 100, scale: 0.5 }}
 			whileInView={{ opacity: 100, y: 0, scale: 1 }}
 			transition={{ duration: 1, type: "spring" }}
+			viewport={{ margin: "100px 100px 100px 100px" }}
 		>
 			{sub}
 		</motion.h2>

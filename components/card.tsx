@@ -37,6 +37,7 @@ const Card: React.FC<Props> = ({
 }) => {
 	return (
 		<motion.div
+			viewport={{ margin: "100px 100px 100px 100px" }}
 			id={`Card.${title}`}
 			initial={{
 				opacity: 0,

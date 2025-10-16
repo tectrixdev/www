@@ -18,6 +18,7 @@ const PictureGallery = () => {
 	return (
 		<div className="flex flex-col items-center">
 			<motion.div
+				viewport={{ margin: "100px 100px 100px 100px" }}
 				className="grid grid-cols-3 gap-3 rounded-lg p-3 backdrop-blur-lg md:grid-cols-6"
 				initial={{
 					opacity: 0,
@@ -123,6 +124,7 @@ const PictureGallery = () => {
 				})}
 			</motion.div>
 			<motion.div
+				viewport={{ margin: "100px 100px 100px 100px" }}
 				initial={{
 					opacity: 0,
 					y: 100,

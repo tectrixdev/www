@@ -26,6 +26,7 @@ const Tagline: React.FC<Props> = ({ line }) => {
 			initial={{ y: -100 }}
 			whileInView={{ y: 0 }}
 			transition={{ duration: 1, type: "spring" }}
+			viewport={{ margin: "100px 100px 100px 100px" }}
 		>
 			{line}
 		</motion.h1>
