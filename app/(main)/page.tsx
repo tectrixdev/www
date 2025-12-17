@@ -46,8 +46,16 @@ export default function Home() {
 						color={-90}
 					/>
 					<Card
+						title="pictures.tectrix.dev"
+						description="A dedicated photo gallery website. (currently closed-source, will be opening soon!)"
+						imageUrl="pictures.png"
+						projectUrl="https://pictures.tectrix.dev/"
+						button="view website"
+						color={-290}
+					/>
+					<Card
 						title="ADHDO"
-						description="A todo app for people with ADHD. (unfinished, currently being remade)"
+						description="A todo app for people with ADHD. (abandoned project)"
 						imageUrl="adhdo.png"
 						projectUrl="https://github.com/tectrixdev/ADHDO"
 						button="view source"

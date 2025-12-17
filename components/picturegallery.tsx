@@ -33,93 +33,23 @@ const PictureGallery = () => {
 				transition={{ duration: 1.5, type: "spring" }}
 			>
 				{images.map((src, index) => {
-					const [i, setI] = useState(0);
-
-					const increment = () =>
-						setI((prev) => Math.min(prev + 1, images.length));
-					const decrement = () => setI((prev) => Math.max(prev - 1, 1));
-
-					useEffect(() => {
-						const handleKeyDown = (event: KeyboardEvent) => {
-							if (event.key === "ArrowRight") {
-								increment();
-							} else if (event.key === "ArrowLeft") {
-								decrement();
-							}
-						};
-
-						if (i > 0) {
-							window.addEventListener("keydown", handleKeyDown);
-						}
-
-						return () => {
-							window.removeEventListener("keydown", handleKeyDown);
-						};
-					}, [i]);
-
 					return (
-						<Popup
-							key={index}
-							onOpen={() => {
-								setI(index + 1);
-							}}
-							trigger={
-								<div className="overflow-hidden rounded-lg shadow-lg">
-									<Image
-										src={src}
-										alt={`Picture ${index + 1}`}
-										width={288} /* size on my display * 2 */
-										height={288} /* size on my display * 2 */
-										className="size-20 cursor-pointer object-cover transition-transform duration-500 ease-in-out hover:scale-150 md:size-36"
-										tabIndex={0}
-									/>
-								</div>
-							}
-							modal
+						<Link
+							href={`https://pictures.tectrix.dev/?image=${index + 1}`}
+							target="_blank"
+							rel="noopener noreferrer"
 						>
-							<div className="grid content-center items-center justify-items-center gap-5">
-								<button
-									className="h-fit w-full rounded-full border-2 border-white backdrop-blur-lg disabled:opacity-50"
-									onClick={decrement}
-									disabled={i === 1}
-								>
-									<Image
-										src="/left.svg"
-										alt="Previous"
-										width={24}
-										height={24}
-										className="mx-auto object-contain"
-									/>
-								</button>
-								<div
-									className="overflow-hidden rounded-lg border-2 border-white backdrop-blur-lg"
-									id="popup"
-								>
-									<Image
-										src={`/Pictures/${i}.jpg`}
-										alt={`Picture ${i}`}
-										width={1000} /* size on my display */
-										height={1000} /* size on my display */
-										className="h-fit w-[300px] object-contain md:h-[500px] md:w-fit lg:h-[700px]"
-										tabIndex={0}
-										quality={85}
-									/>
-								</div>
-								<button
-									className="h-fit w-full rounded-full border-2 border-white backdrop-blur-lg disabled:opacity-50"
-									onClick={increment}
-									disabled={i === images.length}
-								>
-									<Image
-										src="/right.svg"
-										alt="Next"
-										width={24}
-										height={24}
-										className="mx-auto object-contain"
-									/>
-								</button>
+							<div className="overflow-hidden rounded-lg shadow-lg">
+								<Image
+									src={src}
+									alt={`Picture ${index + 1}`}
+									width={288} /* size on my display * 2 */
+									height={288} /* size on my display * 2 */
+									className="size-20 cursor-pointer object-cover transition-transform duration-500 ease-in-out hover:scale-150 md:size-36"
+									tabIndex={0}
+								/>
 							</div>
-						</Popup>
+						</Link>
 					);
 				})}
 			</motion.div>
@@ -139,21 +69,17 @@ const PictureGallery = () => {
 				className="mx-auto mt-5 flex flex-col items-center justify-center self-center"
 			>
 				<Link
-					href="https://www.instagram.com/joran.hennion/"
+					href="https://pictures.tectrix.dev/"
 					target="_blank"
 					rel="noopener noreferrer"
 					className="flex items-center justify-center"
 				>
-					<p className={`mx-5 text-white ${main.className}`}>More on my</p>
-					<Image
-						src="/instagram.svg"
-						alt="Instagram"
-						width={40}
-						height={40}
-						className="cursor-pointer transition-transform duration-300 ease-in-out hover:scale-125"
-						style={{ filter: "invert(1)" }}
-					/>
-					<p className={`mx-5 text-white ${main.className}`}>page</p>
+					<div
+						className={`mx-5 text-white ${main.className} flex flex-col gap-2 rounded-lg border border-white p-5 text-center text-sm backdrop-blur-lg md:flex-row md:gap-5 md:text-lg`}
+					>
+						<p className="hidden md:block">More on</p>
+						<p className="underline underline-offset-8">pictures.tectrix.dev</p>
+					</div>
 				</Link>
 			</motion.div>
 		</div>
